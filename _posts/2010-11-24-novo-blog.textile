@@ -1,22 +1,23 @@
 ---
 layout: post
 title: Novo (mentira) Blog
-Release: 2010-11-24
+date: 2010-11-23
+category: Curiosidades
 ---
 
 A muito tempo procuro um jeito simples e eficiente de compartilhar algum conhecimento (inútil), mas até então nunca estive feliz com nada. Usei Wordpresse e Habari, o segundo me agradou muito durante muito tempo, mas acabei tendo problemas com o banco de dados em SQLite e acabei perdendo todo conteúdo do blog. Desanimei.
 
 A muito tepo também, digo que usar controle de versões pra blogar deveria ser algo simples e eficiente. Isso aliado ao GitHub (me desculpem, mas o Git só é o que é hoje por causa dele. É um ótimo SCM, concordo, mas o GitHub fez toda a diferença) e a minha mania de usar "Textile":http://www.textism.com/tools/textile/ pra escrever as coisas me fez dar uma procurada em como fazer isso de uma maneira relativamente eficiente.
 
-O resultado final é isso que vocês estão vendo: Páginas estáticas HTML hospedadas no "GitHub Pages":http://pages.github.com. Eles rodam no servidor uma ferramenta em _Ruby_ chamcada "Jekkyl":http://github.com/mojombo/jekyll , que server justamente pra isso: um sistema extremamente simples de blog.
+O resultado final é isso que vocês estão vendo: Páginas estáticas HTML hospedadas no "GitHub Pages":http://pages.github.com. Eles rodam no servidor uma ferramenta em _Ruby_ chamcada "Jekyl":http://github.com/mojombo/jekyll , que server justamente pra isso: um sistema extremamente simples de blog.
 
 O código do blog está no "meu github":https://github.com/augustohp/augustohp.github.com em conjunto com os posts. Tentarei explicar brevemente como esse conjunto funciona.
 
-h3. Jekkyl
+h3. Jekyl
 
 Ele parseia tudo e gera os HTMLs que são o que o usuário vê. Pra isso, ele depende basicamente do arquivo _config.yml_, e dos diretórios que iniciam com "__" (underline). O jekkyl funciona basicamente como um ferramenta de template, que lê principalmente o arquivo _index.html_ interpretando o início deste arquivo com informações de layout a ser utilizado e de variáveis específicas.
 
-O Jekkyl usa o Liquid ainda também para parsear o conteúdo o que permite a utilização e confecção de plugins para seu uso, tornando o modelo flexível o suficiente para se fazer o que vier na cabeça depois de uma noite de insônia ou bebedeira.
+O Jekyl usa o Liquid ainda também para parsear o conteúdo o que permite a utilização e confecção de plugins para seu uso, tornando o modelo flexível o suficiente para se fazer o que vier na cabeça depois de uma noite de insônia ou bebedeira.
 
 h3. Textile
 
@@ -30,9 +31,9 @@ Com ele é possível ter uma página HTML para um repositório hospedado dentro 
 
 h3. Posts
 
-Cada post é um arquivo (no meu caso) _Textile_ cujo nome começa com a data de publicação e termina com um breve título do post. Dentro deste arquivo o conteúdo começa com algumas informações usadas pelo Jekkyl a fim dele encontrar o layout que quero utilizar para aquele post, data e título do mesmo.
+Cada post é um arquivo (no meu caso) _Textile_ cujo nome começa com a data de publicação e termina com um breve título do post. Dentro deste arquivo o conteúdo começa com algumas informações usadas pelo Jekyl a fim dele encontrar o layout que quero utilizar para aquele post, data e título do mesmo.
 
-Criar um novo post é tnao complicado quanto escrever um rquivo textile (eu já fazia isso com o Habari) e colocar dentro do diretório _posts_ do Jekkyl. Ao submeter pro repositório no GitHub com um _git push_ é só esperar um pouco para que o parseamento seja feito no servidor e pronto.
+Criar um novo post é tnao complicado quanto escrever um rquivo textile (eu já fazia isso com o Habari) e colocar dentro do diretório _posts_ do Jekyl. Ao submeter pro repositório no GitHub com um _git push_ é só esperar um pouco para que o parseamento seja feito no servidor e pronto.
 
 h3. Comentários
 
