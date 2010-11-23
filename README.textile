@@ -1,3 +1,9 @@
 h1. Blog
 
-My personal and tech blog code using Github pages ...
+My personal and tech blog code using Github pages. The whole code is processed by Jekyll and transformed in vanilla HTML.
+
+Some more about GitHub Pages can be found here: http://pages.github.com/
+
+h2. Copyright
+
+If not mentioned, all the copyright belongs to me. Feel free to distribute, change, comment, cite or whatever you want. Just give the right credits to me. The posts can be found in the _posts_ folder.
