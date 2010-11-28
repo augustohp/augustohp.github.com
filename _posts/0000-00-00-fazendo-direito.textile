@@ -1,0 +1,144 @@
+---
+layout: post
+title: Fazendo Direito
+category: PHP
+published: false
+---
+
+<p>
+	Todo mundo que lê este blog trabalha com desenvolvimento. E acho que não é desejo de ninguém passar noites e finais de semana fazendo hora hora, até mesmo porque acho que poucos aqui ganham pra isso. A pergunta que eu tenho a fazer a vocês é: você acha normal que toda modificação ou nova implementação seja uma dor de cabeça?
+</p>
+<p>
+	A resposta correta seria "não", mas acho que a realidade de muitos é "sim". Agora, porque isso acontece? Podem haver diversos motivos, entre eles:
+	<ul>
+		<li> Falta de análise </li>
+		<li> Código legado </li>
+		<li> Falta de conhecimento da linguagem </li>
+		<li> Falta de conhecimento/preparo/experiência no desenvolvimento </li>
+	</ul>
+</p>
+<p>
+	Apesar de ser tentador jogar toda culpa na <em>falta de análise</em>, raramente ela é o problema. E quando é, é facilmente identificada. O fato é que se você tem um problema de análise, provavelmente terá que refazer ou mudar algo, mas isso não deveria impactar no restante do projeto.
+</p>
+<p>
+	O que eu quero dizer é que um erro de análise não justifica uma software mal construído. O que é um software mal constrído? Pense em algo feito com links simbólicos, dependência direta de funções nativas da linguagem, sem documentação mínima necessária (<em>PHPDoc</em>), um programa em que o efeito Déjà Vu é seu mair companheiro, e principalmente um programa em que você não sabe quais são os input e outputs; ou seja, que é praticamente impossível de controlar.
+</p>
+<p>
+	Ora, o que desenvolvemos senão processos que automatizam e melhoram a vida das pessoas? Quem disse que por isso nossa vida tem que ser miserável? Que uma alteração deve ser feita em mais de um lugar ou que uma tarefa requisite uma busca em intermináveis arquivos? Enfim, qualquer coisa que seja digna de um chinês preso?! (nada contra os chineses, juro!)
+</p>
+<h3>Efeito Déjà Vu</h3>
+<p>
+	A melhor medida pra você saber se algo vai te dar mais trabalho do que deveria um dia, é ficar esperto com esse companheiro. Se você está fazendo algo, e teve - mesmo que de relance - a impressão que já fez isso em algum lugar. Pare, respire e pense. Por que fazer a mesma coisa mais de uma vez?
+</p>
+<p>
+	Não gosta de classes nem objetos? Ok, use funções. O Wordpress é um projeto procedural bem sucedido. Nem tudo nele é um ótimo exemplo de construção, mas é um começo.
+</p>
+<p>
+	Aprenda a utilizar funções, ou métodos. Dê valor ao encapsulamento de algoritmos. O que soou complicado é simples: em vez de jogar diretamente em uma página a consulta de banco de um usuário, coloque dentro de uma função genérica que possa fazer qualquer busca na tabela de usuários. Pronto.
+</p>
+<p>
+	Você não precisa saber o nome da tabela de usuários, só precisa saber qual a função ou método responsável por isso. A tabela mudou, ou um JOIN precisa ser feito, ok. Faça na função e tudo continua funcionando. 10 minutos que você perde pensando em uma função bem feita é igual a diversas noites de sono na sua vida.
+</p>
+<h3>Padrões pra que te quero</h3>
+<p>
+	Depois que você aprende a dar valor nas funções ou métodos. Você vai dar automaticamente valor aos padrões. Chega um momento em que você tem coisa demais encapsulada em funções. O que era pra te ajudar, pode ser seu maior pesadelo agora. Perguntas como as abaixo passam a ser cada vez mais frequentes:
+	<ul>
+		<li> Qual o nome da função mesmo ? </li>
+		<li> Quais os parâmetros ou o que ela retorna ? </li>
+		<li> Qual o nome do arquivo ou da classe ?! </li>
+		<li> Será que se eu importar o arquivo com a função eu vou ter problemas de já ter uma função com nome parecido ? </li>
+	</ul>
+</p>
+<p>
+	Antes de começar a programar, seja sozinho ou em equipe; tenha em mente o padrão que você vai utilizar. Você não deveria se dar ao luxo de ter que resolver suas dúvidas antes de utilizar uma função. E se isso acontecesse sempre que você usasse um IF, um FUNCTION, CLASS, SWITCH ?! Sua produção iria baixar, certo?!
+</p>
+<p>
+	Você pode argumentar que o PHP também sofre o problema da falta de padrões. Ok, mas dificilmente você terá um documentação que chegue PERTO da documentação do PHP. Então melhor a gente tomar mais cuidado com nosso código. Mas do que se trata esses padrões propriamente ditos?
+	<ul>
+		<li>Nomenclatura (classes, funções/métodos, arquivos)</li>
+		<li>Identação e estilo de código</li>
+		<li>Manipulação de erro</li>
+		<li>Tipos de retorno de funções/métodos</li>
+	</ul>
+</p>
+<h4>Nomenclaura</h4>
+<p>
+	A primeira coisa é decidir a língua que você vai usar. Por favor, metade inglês e metade português não. Existem coisas que acho aceitáveis, como: getNome(), setSenha(), isAutenticado(). Mas qualquer coisa fora disso é um pouco chato de lidar. As ações, métodos,  variáveis devem estar num mesmo contexto. O código abaixo não é lá muito amigável.
+</p>
+<code>
+	$user = new Usuario();
+</code>
+<p>
+	A segunda coisa é o padrão de nome de arquivos. Você deve seguir apenas uma regra: não invente extensões. Arquivos PHP terminam com <em>.php</em> e ponto final; por questões de segurança.
+	Fora as regras, eu tenho algumas sugestões para nomenclatura de arquivos:
+	<ul>
+		<li> Sempre em minusculo e sem caracteres especiais </li>
+		<li> Sem espaços, "_" no lugar deles </li>
+		<li> Um pré sufixo para identificar melhor os tipos: 
+			<ul>
+				<li> <em>*.class.php</em> Para classes </li>
+				<li> <em>*.interfaces.php</em> Para interfaces </li>
+				<li> <em>*.inc.php</em> Para arquivos de inclusão </li>
+				<li> <em>*.conf.php</em> Par arquivos de configuração </li>
+				<li> <em>*.tpl.php</em> Arquivos de template ou view </li>
+				<li> <em>*.php</em> Demais arquivos </li>
+			</ul>
+		</li>
+	</ul>
+</p>
+<p>
+	Agora vamos aos métodos e classes. Recomento guardar uma classe em cada arquivo (para uso posterior do autoload). Quanto a sua nomenclatura, existem basicamente dois padrões:
+	<ul>
+		<li> CamelCase </li>
+		<li> Delimitador_De_Palavras_Compostas </li>
+	</ul>
+	Seja lá qual você escolher, case com ele. Nunca deixe ele! Este será seu rifle, existem muitos outros iguais a ele, mas este é seu! Só seu! Nunca o deixe!
+</p>
+<p>
+	O mesmo serve para as varíaveis. Pelo santo amor de Cristo, Deus, ou do Monstro do Spaguetti Viador. Esqueça variáives de uma letra a não ser para variáives de incremento.
+</p>
+<code>
+	// Isso é ruim de ler
+	if ( $xpto >= 1 ) {
+		// ... carvalhada de código
+	}
+	// Isso é bem melhor
+	if ( $nível_acesso >= 1 ) {
+		// ... carvalhada de código
+	}
+	// Se você usar constantes, melhor ainda !
+	if ( $nivel_acesso >= ACESSO_USUARIO_COMUM ) {
+		// ... você já sabe o que vem aqui
+	}
+</code>
+<p>
+	Você ainda pode utilizar a <em>Notação Húngara</em> pra nome de variáveis. O que significa basicamente, informar o tipo da variável através de uma letra.
+</p>
+<code>
+	$aClientes	= array();
+	$sNomeCliente 	= "Alberto Roberto";
+	$iQtdeClientes 	= 14;
+	$fTotalPedido	= 99.18;
+</code>
+<h4>Estilo de Código</h4>
+<p>
+	É coisa besta, mas faz uma diferença! Primeiro vem a identação. Quem não usar ou seguir ela a risca merece ter um dedo cortado. A identação premite que um código seja interpretado e vizualido por seres humanos. Pra máquina tanto faz, mas ela faz o trabalho burro de só ler o que está escrito. Ela não precisa entender nada.
+</p>
+<p>
+	O que precisa ser definidos no estilo de código?
+	<ul>
+		<li>Identação
+			<ul>
+				<li> Por espaços ou por Tab</li>
+				<li>Quantos caracteres</li>
+			</ul>
+		</li>
+		<li> Número de colunas máximo para uma linha (Normalmente 80)</li>
+		<li> Encoding dos arquivos (Se você não sabe do que estou falando, use ISO-8859-1)</li>
+		<li> Uso de chaves ( abrem logo após a instrução ou na próxima linha ?! ) </li>
+	</ul>
+</p>
+<h4>Manipulação de Erro</h4>
+<p>
+	Sua aplicação não trata erros? Tratar não significa esconder eles, significa fazer algo a respeito. Caso você esteja fazendo algo procedural não existe muita coisa que pode ser feita a não ser um Log ou quem sabe um envio de e-mail; mas coso esteja usando Orientação a Objetos, você pode fazer uso das Exceptions para tratar melhor os erros.
+</p>
