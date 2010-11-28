@@ -1,0 +1,59 @@
+---
+layout: post
+title: Clonando Objetos
+published: false
+category: PHP
+---
+
+Hoje conversando com um amigo (Klederson Bueno, PHPBurn) a respeito de um "pequeno" problema que ele tinha, resolvi voltar a escrever. É de conhecimento de muitos que para "copiar" (clonar) objetos no PHP 5 não podemos simplesmente atribuir um objeto a outra variável, mas sim, utilizar o operador "clone" junto com a atribuição para termos um novo objeto idêntico ao anterior.
+
+<code>
+<?php
+	$objeto1 = new StdClass();
+	$objeto2 = $objeto1; // Cria uma referência ao objeto 1 no PHP 5
+	$objeto3 = clone $objeto2; // Cria uma cópia idêntica do objeto1
+?>
+</code>
+
+Ok, o problema não é exatamente esse. As coisas ficam mais chatas quando você têm outros objetos dentro do objeto que você deseja clonar. Ora, pensamos cá com nossos miolos:
+* Queremos copiar nosso objeto inteiro, uma cópia exata
+* Esse objeto possui atributos
+* Alguns desses atributos são outros objetos, de outras classes
+* Esses objetos também serão clonados, certo?
+
+Errado! Uma cópia exata de um objeto, implica em copiar também sua referência a outros objetos. Ou seja, apesar do objeto clonado ser uma instância independente, os atributos deste que são outros objetos, serão referências aos objetos da instância original. Não pegou? Nem eu lendo isso, mas vamos ao exemplo:
+
+<code>
+<?php
+class Grupo {
+	public  $nome;
+}
+class Usuario {
+	public $nome;
+	public $grupo;
+}
+
+$disney = new Grupo();
+$disney->nome = "Personagens da Disney";
+
+$tico = new Usuario();
+$tico->nome = "Tico, o irmão do Teco";
+$tico->grupo = $disney;
+
+$teco = clone $tico;
+$teco->nome = "Teco, o irmão do Tico";
+// Teco também têm como $grupo o objeto $disney ...
+
+// Vamos mudar o Teco pra Pixar, irmãos não funcionam juntos ...
+$teco->grupo->nome = "Agora é tudo do Steve Jobs! Eu sou Pixar !";
+
+// Certo Tico?
+echo $tico->grupo->nome; // Pixar
+
+// Pelo jeito, o Teco resolveu acompanhar o irmão ... ferrou ...
+?>
+</code>
+
+Pegaram? Ao alterar o grupo do $tico, estávamos alterando o mesmo grupo do $teco; o mesmo objeto. Prestem atenção, isso não é bug; é recurso. Qualquer coisa, a documentação do PHP está aí: http://www.php.net/clone
+
+Até a próxima!
