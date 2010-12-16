@@ -3,6 +3,7 @@ layout: post
 title: Meu ambiente de trabalho
 category: PHP
 published: true
+date: 2010-12-16
 ---
 
 Seguindo a brincadeira iniciada pelo meu caro amigo "Anderson Casimiro (duodraco)"http://http://duodra.co/post/seu-ambiente-de-trabalho-em-7-itens/ vou descrever o que uso no meu dia a dia ...
