@@ -3,45 +3,29 @@ body {
     color: #797979;
     background: #f7f7f7;
     text-align: center;
-    margin:0 0 0;
+    margin: 0 0 0;
     border-top: 6px solid #584d4d;
     text-shadow: #FAFAFA 1px 1px 0;
 }
-#page{
-    background:#f7f7f7;
-    text-align:left;
-    margin:0 auto;
-    padding:20px 0 10px;
-    position:relative;
-    width:700px;
-    min-height: 100%;
-}
-#header{
-    text-align: left;
-    padding: 0 0 20px;
-    background:none;
-}
-.posts h2 {
-    margin-bottom: 5px;
-}
-.posts h3 {
-    font-size: 0.6 em;
-    color: #B1B1B1;
-    margin-top: 0px;
-}
-#footer {
-    width: 100%;
-    text-align: center;
-    border-top: 6px solid #584d4d;
-}
-img {
-	border: 1px solid #ccc;
-	padding: 2px;
-	margin-right: 6px;
-}
-a:active, a:visited, a:link {
-    color: #797979;
-}
-h2,h3,h4 {
-    font-family: "lucida grande",tahoma,arial,helvetica,sans-serif;
-}
+
+a:active, a:visited, a:link { color: #797979; text-decoration: none; }
+img { border: 1px solid #ccc; padding: 2px; margin-right: 6px; }
+ul, ol { margin-bottom: 25px; }
+li { margin-bottom: 5px; }
+
+#page{ background:#f7f7f7; text-align:left; margin:0 auto; padding:20px 0 10px; position:relative; width:700px; min-height: 100%; }
+
+#header{ text-align: left; padding: 0 0 20px; background:none; }
+#header a:hover { -webkit-transition-delay: 0s; -webkit-transition-duration: 1.0s; -webkit-transition-property: text-shadow; -webkit-transition-timing-function: linear;  text-shadow: #584d4d 1px 1px 100px; }
+#header h1, #header h1 a { color: #584d4d; font-size: 2.0em; margin: 0; text-shadow: #584d4d 1px 1px 10px; }
+#header h2 { font-size: 1.5em; margin: 0; }
+
+.posts .post { margin-bottom: 50px; }
+.posts h2 { margin-bottom: 5px; }
+.posts h3 { font-size: 1.5em; color: #B1B1B1; margin-top: -30px; margin-left: -50px; width: 40px; text-align: center; }
+.posts .post a, .posts .post-content a { text-decoration: underline; }
+.posts a:hover { color: #584d4d; -webkit-transition-delay: 0s; -webkit-transition-duration: 0.30s; -webkit-transition-property: color; -webkit-transition-timing-function: linear; }
+.posts .post-content, .posts .post { margin-top: -60px; }
+
+#footer { width: 100%; text-align: center; border-top: 6px solid #584d4d; }
+

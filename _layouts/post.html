@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
-<div class="post">
-    <h1>{{ page.title }}</h1>
+<div class="posts">
+    <h2>{{ page.title }}</h2>
+    <h3> {{ page.date | date: "%d %b %y" }} </h3>
     
+    <div class="post-content">
     {{ content }}
+    </div>
 </div>
 
 <div id="disqus_thread"></div>
