@@ -1,5 +1,5 @@
 body {
-    font: 75% Verdana, "Bitstream Vera Sans", sans-serif, Helvetica;
+    font: 75% font-family: 'Droid Sans', arial, serif;
     color: #797979;
     background: #f7f7f7;
     text-align: center;
@@ -21,8 +21,13 @@ body {
     padding: 0 0 20px;
     background:none;
 }
+.posts h2 {
+    margin-bottom: 5px;
+}
 .posts h3 {
-    font-size: 0.8 em;
+    font-size: 0.6 em;
+    color: #B1B1B1;
+    margin-top: 0px;
 }
 #footer {
     width: 100%;
@@ -34,7 +39,7 @@ img {
 	padding: 2px;
 	margin-right: 6px;
 }
-a:active, a:visited {
+a:active, a:visited, a:link {
     color: #797979;
 }
 h2,h3,h4 {
