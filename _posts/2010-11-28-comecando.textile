@@ -9,7 +9,7 @@ Senhores, senhoras e coisas: uni-vos. Você se preocupa com sua carreira? Com se
 
 Óbvio que sim. Acredite. Ganhar mais não depende do seu tempo de experiência. Ok, ele influi; mas pouco. Corra atrás da sua carreira, invista em você e lembre-se desses 3 pontos sempre!
 
-h2. Leia
+h4. Leia
 
 Existem dois grupos de programadores:
 
@@ -31,7 +31,7 @@ Livros e sites que você deveria ler e ler e ler e ler de novo:
 * Enterprise Patterns - Gang of Four
 * Essential PHP Security - Cris Shiflett
 
-h2. Pratique
+h4. Pratique
 
 Não existe nada no mundo que substitua a experiência. Por isso, pratique. Faça a mesma coisa milhares de vezes. Refaça mais algumas centenas. Crie ou teste coisas novas com frequência. Distribua seu código, deixe os outros verem e quem sabe até utilizarem.
 
@@ -43,7 +43,7 @@ Você já tentou uma implementação MVC? Já viu como funciona um Active Record
 
 Mais uma vez: experiência. Nada substitui isso. Não tem como comprar, como fingir ou até mesmo trapacear. Experiência é experiência.
 
-h3. Ame os erros
+h4. Ame os erros
 
 Eu ia colocar outra coisa aqui, mas isso vale a pena ser ressaltado: ame os erros. Não tenha medo deles, tenha medo do contrário. Quando tudo funciona, ou aparentemente funciona.
 
