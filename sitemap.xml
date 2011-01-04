@@ -11,7 +11,7 @@ rooturi: http://blog.augustopascutti.com
    </url>
 {% for post in site.posts %}
    <url>
-      <loc>{{ page.rooturl }}{{ post.url }}</loc>
+      <loc>http://blog.augustopascutti.com{{ post.url }}</loc>
       <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
