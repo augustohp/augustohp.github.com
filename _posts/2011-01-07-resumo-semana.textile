@@ -13,7 +13,7 @@ h2. Desenvolvimento do PHP
 
 * *Perfomance Hash*: Um pessoal fez um profilling do código atual do PHP e concluiu que era possível melhorar as funções de hash (MUUUUITA coisa depende delas). Fizeram um patch, enviaram e agora outras pessoas estão melhorando e garantindo que as coisas funcionem como deveriam. Software Livre é isso. "Mais informações":http://news.php.net/php.internals/51158
 
-* *Engraçado*: A um ano atrás alguém abriu um bug no PHP porque a função number_format() não estava retornando mais 0 (zero) e sim _null_ após a atualização para o PHP 5.3.1. Ninguém mais nem menos que o _Rasmus Lerdorf_ respondeu o bug pacientemente, mas a conversa vale a pena ser lida. "O santo bug":http://bugs.php.net/bug.php?id=50696
+* *Engraçado*: -A um ano atrás- Há um ano alguém abriu um bug no PHP porque a função number_format() não estava retornando mais 0 (zero) e sim _null_ após a atualização para o PHP 5.3.1. Ninguém mais nem menos que o _Rasmus Lerdorf_ respondeu o bug pacientemente, mas a conversa vale a pena ser lida. "O santo bug":http://bugs.php.net/bug.php?id=50696
 
 h2. Ferramentas
 
