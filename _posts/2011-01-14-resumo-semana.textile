@@ -21,10 +21,14 @@ h2. Ferramentas
 
 h2. Posts
 
-* "*Database version control*":http://techportal.ibuildings.com/2011/01/11/database-version-control/: Este artigo é bem legal. Ele cobre algumas alternativas sobre como você pode versionar seu banco de dados.
+* "*Usando o SDK do Facebook para executar FQL*":http://blog.rafaeldohms.com.br/2011/01/12/using-the-facebook-php-sdk-to-run-fql/: O Facebook está numa fase de migração das APIs atuais. Sendo claro, a situação está uma zona. Neste post o rafael Dohms nos mostra como usar a FQL (consultas SQL dos dados do Facebook) usando o SDK em PHP. (em inglês)
 
-* "*Facebook Hacker Cup*":http://www.facebook.com/notes/facebook-engineering/announcing-the-facebook-2011-hacker-cup/467531498919: As eliminatórias do Facebook Hacker Cup começaram e já terminaram. Parabéns aos qualificados. Quem não participou, pode pegar os 3 problemas e tentar resolver.
+* "*Database version control*":http://techportal.ibuildings.com/2011/01/11/database-version-control/: Este artigo é bem legal. Ele cobre algumas alternativas sobre como você pode versionar seu banco de dados. (em inglês)
 
-* "*Testando Traits*":http://sebastian-bergmann.de/archives/906-Testing-Traits.html: O Sebastian Bergman, criador do PHPUnit, postou essa semana como você poderá fazer testes unitários na funcionalidade que será adicionada no PHP 5.4. A funcionalidade já está disponível no _master_ branch do PHPUnit e será lançado na versão 3.6 do PHPUnit.
+* "*Facebook Hacker Cup*":http://www.facebook.com/notes/facebook-engineering/announcing-the-facebook-2011-hacker-cup/467531498919: As eliminatórias do Facebook Hacker Cup começaram e já terminaram. Parabéns aos qualificados. Quem não participou, pode pegar os 3 problemas e tentar resolver. (em inglês)
 
-* "*Futuro do Hudson*":http://hudson-labs.org/content/hudsons-future: Provavelmente ele mude de nome conforme proposta pelos líderes do projeto num post essa semana. Essa não é relacionada diretamente ao PHP, mas bateu na tabela e aqui está.
+* "*Testando Traits*":http://sebastian-bergmann.de/archives/906-Testing-Traits.html: O Sebastian Bergman, criador do PHPUnit, postou essa semana como você poderá fazer testes unitários na funcionalidade que será adicionada no PHP 5.4. A funcionalidade já está disponível no _master_ branch do PHPUnit e será lançado na versão 3.6 do PHPUnit. (em inglês)
+
+* "*Futuro do Hudson*":http://hudson-labs.org/content/hudsons-future: Provavelmente ele mude de nome conforme proposta pelos líderes do projeto num post essa semana. Essa não é relacionada diretamente ao PHP, mas bateu na tabela e aqui está. (em inglês)
+
+* "*Resumo da semana por Ailton Ribeiro*":http://lab.ailtonribeiro.com/log/pt-br/trivias/resumo-da-semana-01-2011/: O Ailton Ribeiro tem uma iniciativa idêntica a minha, porém foca nos assuntos de interesse dele, que eu diria; são de relevância a todos envolvidos nesta área.
