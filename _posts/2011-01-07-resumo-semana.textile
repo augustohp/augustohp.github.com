@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resumo da Semana PHP
+title: Resumo da Semana PHP (Jan #1)
 category: PHP
 published: true
 ---
