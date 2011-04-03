@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Omissão da TAG de fechamento do PHP
+date: 2010-12-13
 category: PHP
 published: true
 ---

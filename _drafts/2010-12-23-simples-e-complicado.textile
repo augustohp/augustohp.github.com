@@ -1,0 +1,105 @@
+---
+layout: post
+title: O simples é complicado
+date: 2010-12-23
+category: Desenvolvimento
+published: false
+---
+
+Acho que faz parte do desenvolvimento profissional de todo mundo (de novo: acho) tentar colocar em prática tudo aquilo que se aprende. Soa até como óbvio. Mas não é.
+
+Criar um pedaço de software, um programa que faça algo é excitante. Ver pessoas usando e tirando proveito disso dá a sensação de "dever cumprido". Depois disso vêm o que? Dores de cabeça, falta de tempo, stress, muito trabalho e pouco retorno. Qualquer software bem sucedido recebrá updates, adições de funcionalidades, correções e mais correções.
+
+h2. Simplicidade
+
+Tempo é algo precioso. Ainda mais no nosso ramo: web. Precisamos estudar tudo, estar sempre ciente do que acontece, do que aparece e do que não aparece. Isso tudo sem contar que você tem uma vida!
+
+Ecnomize tempo no que você pode. Sacrificar sua vida pessoal não é uma opção. Estudos? Pode ser, mas apenas se você quiser continuar com o que você tem hoje. Então economize tempo no seu trabalho. Como? Simplifique.
+
+Você já ficou algumas horas lendo um código pra entender como ele fazia alguma coisa? Se perdeu no meio de uma cadeia de "if"s? E quando o telefone toca no meio disso ou alguém te chama pra mostrar o novo meme da internet? Há, mais tempo perdido! (Não com o meme, eles são legais! Mas você vai precisar de mais tempo pra voltar a entender tudo de novo).
+
+Nessa parte do post eu só quero que você entenda uma coisa: as coisas não são complicadas. Nós as fazemos complicadas! Então simplifique. Passe horas, mas passe horas pra garantir que uma implementação seja a mais simples possível. Que tudo que o cara que for ver isso depois precise pra entender, esteja escancarado na cara dele.
+
+Perca menos tempo com coisas que você não deveria.
+
+h2. Complexidade
+
+Odeio analogias com o mundo real, mas do mesmo jeito que um ser humano se desenvolve, aprende e têm mais experiência; um software também cresce, e se torna - simples e ironaicamente - mais complicado.
+
+É óbvio que modificar ou acrescentar algo no início de um projeto é mais simples do que depois de anos de mercado. Não é espanto para ninguém escutar que o Windows 7 foi praticamente escrito do zero, que o Mac OS 10.6 teve sua estrutura reescrita para trabalhar melhor com a memória que ele tem a mão. Isso é simples de entender! E acho que até todo mundo enxerga.
+
+As coisas ficam maiores, mais complicadas e mais difíceis de manter. Até o ponto em que não vale mais a pena jogar esforço naquilo. Aqui, a turma se divide. Alguns enxergam, outros não. Mas o fato é fato. Todo software - assim como uma pessoa - tem uma data de nascença e uma de morte.
+
+h2. A solução (ou não)
+
+Reescreva ele. Agora vocês me matar.
+
+Sério, isso é inevitável. Agora, como diminuir as dores de cabeça de se reescrever um projeto que levou anos e anos para amadurecer? 
+
+Simplifique. Simplifique as coisas, se possível a um nível que um retardado entenda. Existem mais deles no mundo do que queríamos e menos do que precisaríamos para aprender que a complexidade é puro fruto da falta de planejamento.
+
+Aprenda que um software é composto de algoritmos. Algoritmos que se repetem, repetem e se repetem. Veja alguns exemplos:
+
+* Login
+* Comunicação com o Banco de Dados
+* Listagem de arquivos
+* Visualização de tipos de dado
+* Validação
+* Distribuição de arquivos
+* Cache
+* Busca
+* Filtros
+
+E a lista continua. A única coisa (e que hoje não é mais única. Glabilização says Hi) que seu software têm de diferente são as regras de negócio. Como todas essas partes formam o todo e como esse todo tem um objetivo.
+
+Se você já sabia disso, parabéns. Se você não sabia, repense. Quando um software precisa ser reescrito, não significa jogar tudo fora. Significa: Pegue as partes boas, e as mantenha. Pegue as ruins, jogue fora e as faça melhores.
+
+h2. O primeiro pecado: Engenharia de Software
+
+É por ela que tudo começa a dar errado. É praticamente impossível que um time funcione bem sem um bom líder. Agora, é realmente impossível que algo de bom saia desse time e desse "bom líder" se ele não consegue entregar o que lhe foi pedido.
+
+Quem fez faculdade, ou já estudou Engenharia de Software ou trabalha na área sabe que não existem métricas eficientes em software. Nada que diga "oi, você está indo muito bem" ou "meu! que meeerrda!". Em geral quem faz isso é o cliente, mas ele nem sabe o que é um algoritmo, que dirá dizer se o trabalho foi realmente bem feito. Coisas funcionando não são parâmetro! Nosso governo funciona. Ninguém pode negar isso.
+
+Se seu tempo não é precioso, o dinheiro do cliente é (pra ele). Algo mal feito, levará mais tempo pra ser modificado, arrumado ou sejá lá o que tiver que ser feito. Isso vai custar mais caro do que deveria. E com certeza, o cliente não ficará feliz na hora da conta.
+
+Como saber se você está no caminho certo então? Veja o erro logo. Como? Entregue logo o que você tem pra entregar. Metodologias ágeis estão na moda não porque soam bem ou façam sua equipe parecer melhor do que ela realmente é; mas porque elas realmente funcionam.
+
+Se seu gerente, diretor, chefe, cacique ou amiguinho não conhece nem implementa metodologias ágeis, corra e mostre pra ele. Porque provavelmente ele está te carregando pro inferno junto com ele.
+
+h2. A primeira bênção: Filosofia Unix
+
+Se você já foi um administrador de sistemas ou redes e teve que lidar muito com terminal, e - olha só que coisa - agora é um programador, provavelmente já reparou como as coisas num Shell (ambiente modo texto) funcionam. Você tem uma série de programas, normalmente bem menores que 4k que fazem uma tarefa. Muito bem feita.
+
+Doug Macroy (um "bestinha" que filosofou o conceito de Pipes do Unix), resume a filosofia do Unix da seguinte maniera: _"Escreva programas que façam uma coisa e a façam bem feita. Escreva programas que trabalhem juntos."_.
+
+É um ótimo resumo de uma longa história. Mas é o suficiente. Você (quase) sempre precisará lidar com um banco de dados, cada sistema que você desenvolveu tem um jeito diferente de lidar com isso? Hmn, que chato.
+
+Toda vez que você melhora algo em uma parte específica, toda uma gama de projetos poderia ter vantagem sobre isso. Toda vez que você corrige uma falha, você realmente espera encontrar a mesma falha de novo em outro projeto? Que dirá no mesmo! E acontece. Como acontece.
+
+Isso significa que você não está delegando as tarefas direito. Você não encapuslou direito o algoritmo. Não determinou quais sub-tarefas envolviam determinada tarefa e não especializou essas sub-tarefas direito.
+
+h2. Orientação a Objetos
+
+A Orientação a Objetos é um paradigma que leva a reutilização de código a um novo nível. Ela é extremamente simples de entender e usar, porém leva uma vida toda pra realmente enxergar seu valor.
+
+Fazer as coisas usando OO não te faz um programador melhor. Fazer as coisas em OO, escrever testes unitários sim. Os testes ajudam você a perceber o quão complexo seu código é, e o quão rígido ele é. 
+
+Um teste por si só deve ser simples e objetivo. Agora, como fazer isso se o que precisa ser testado não é simples nem objetivo? É ... aí as coisas começam a afundar e você começa a perceber que talvez, poderia ter feito as coisas diferente.
+
+Não tenha medo, essa percepção nunca vai te deixar. Se algum dia você deixar de perceber que poderia ter feitos as coisas melhores e mais simples, corra para as montanhas.
+
+h2. MVC
+
+Design Patterns. OO. MVC. Café. Existem coisas que não saem de moda. Mas será que isso significa que coisas que não saem de moda são boas?
+
+Não me leve a mal, mas de nada adianta um conceito ser entendido mecanicamente. Um Design Pattern 
+
+h2. Os mandamentos de Eric Raymond
+
+h2. Coisas que você poderia ler
+
+* "Unix philosophy":http://en.wikipedia.org/wiki/Unix_philosophy
+* "Unix pipes":http://en.wikipedia.org/wiki/Pipeline_(Unix)
+* "Robert Pike":http://en.wikipedia.org/wiki/Rob_Pike
+* "Pareto principle":http://en.wikipedia.org/wiki/Pareto_principle
+* "KISS Principle":http://en.wikipedia.org/wiki/KISS_Principle

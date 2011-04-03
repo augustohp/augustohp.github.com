@@ -1,0 +1,39 @@
+--- 
+layout: post
+title: Compilando SVN em um Host compartilhado
+category: Unix
+published: false
+---
+
+h2. Motivação
+
+O Subversion (SVN) possui algum tempo de estrada, e algumas major versions. Óbvio que o preferível é que você utilize sempre uma versão mais nova. Existem duas árvores que são mantidas atualmente a 1.5 que recebe somente patches de segurança e estabilidade e a 1.6 que é ativamente desenvolvida.
+
+É comum em hosts e até mesmo em ambientes de trabalho que os clients de subversion estejam desatualizados, como eu costumo utilizar branches e preciso do track de merging pra tornar as coisas um pouco mais fáceis, eu preciso da versão 1.5. Se você quer saber especificamente o que aconteceu em cada _major release_ vá pro "release notes":http://subversion.apache.org/docs/release-notes/.
+
+h2. Requisitos
+
+Mão na massa! Você precisa só de um acesso SSH, e obviamente tudo que isso implica: uma home folder e permissões dentro dela. Como 99% das pessoas usam BASH (eu inclusive) só irei considerar ele.
+
+h2. Instalando
+
+Crie na sua home um diretório _src_ que conterá os sources dos SVN e suas dependências. Obtenha o "código fonte do SVN":http://subversion.apache.org/source-code.html descompacte dentro do diretório _src_. É util baixar também as dependências dele que podem ser encontradas na mesma página dos fontes.
+
+O que farei aqui é compilar as d
+
+{% highlight sh linenos %} 
+cd
+mkdir src
+cd src
+wget http://subversion.tigris.org/downloads/subversion-1.6.15.tar.bz2
+wget http://subversion.tigris.org/downloads/subversion-deps-1.6.15.tar.bz2
+tar -jxvf subversion-1.6.15.tar.bz2
+tar -jxvf subversion-deps-1.6.15.tar.bz2
+rm subversion*.tar.bz2
+cd subversion-1.6.15/
+cd ./configure --prefix=$HOME \ 
+               --disable-mod-activation \
+               --disable-shared \
+               --enable-all-static
+make && make install
+{% endhighlight %}

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Resumo da Semana PHP (Jan #1)
-category: PHP
+date: 2011-01-07
+category: PHP,Resumos
 published: true
 ---
 

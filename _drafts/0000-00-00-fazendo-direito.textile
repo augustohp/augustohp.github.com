@@ -21,7 +21,7 @@ published: false
 	Apesar de ser tentador jogar toda culpa na <em>falta de análise</em>, raramente ela é o problema. E quando é, é facilmente identificada. O fato é que se você tem um problema de análise, provavelmente terá que refazer ou mudar algo, mas isso não deveria impactar no restante do projeto.
 </p>
 <p>
-	O que eu quero dizer é que um erro de análise não justifica uma software mal construído. O que é um software mal constrído? Pense em algo feito com links simbólicos, dependência direta de funções nativas da linguagem, sem documentação mínima necessária (<em>PHPDoc</em>), um programa em que o efeito Déjà Vu é seu mair companheiro, e principalmente um programa em que você não sabe quais são os input e outputs; ou seja, que é praticamente impossível de controlar.
+	O que eu quero dizer é que um erro de análise não justifica uma software mal construído. O que é um software mal constrído? Pense em algo feito com links simbólicos, dependência direta de funções nativas da linguagem, sem documentação mínima necessária (<em>PHPDoc</em>), um programa em que o efeito Déjà Vu é seu maior companheiro, e principalmente um programa em que você não sabe quais são os inputs e outputs; ou seja, que é praticamente impossível de controlar.
 </p>
 <p>
 	Ora, o que desenvolvemos senão processos que automatizam e melhoram a vida das pessoas? Quem disse que por isso nossa vida tem que ser miserável? Que uma alteração deve ser feita em mais de um lugar ou que uma tarefa requisite uma busca em intermináveis arquivos? Enfim, qualquer coisa que seja digna de um chinês preso?! (nada contra os chineses, juro!)
@@ -53,7 +53,7 @@ published: false
 	Antes de começar a programar, seja sozinho ou em equipe; tenha em mente o padrão que você vai utilizar. Você não deveria se dar ao luxo de ter que resolver suas dúvidas antes de utilizar uma função. E se isso acontecesse sempre que você usasse um IF, um FUNCTION, CLASS, SWITCH ?! Sua produção iria baixar, certo?!
 </p>
 <p>
-	Você pode argumentar que o PHP também sofre o problema da falta de padrões. Ok, mas dificilmente você terá um documentação que chegue PERTO da documentação do PHP. Então melhor a gente tomar mais cuidado com nosso código. Mas do que se trata esses padrões propriamente ditos?
+	Você pode argumentar que o PHP também sofre o problema da falta de padrões. Ok, mas dificilmente você terá um documentação que chegue PERTO da documentação do PHP. Então melhor a gente tomar mais cuidado com nosso código. Mas do que se tratam esses padrões propriamente ditos?
 	<ul>
 		<li>Nomenclatura (classes, funções/métodos, arquivos)</li>
 		<li>Identação e estilo de código</li>
