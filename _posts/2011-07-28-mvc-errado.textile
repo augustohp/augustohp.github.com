@@ -113,3 +113,4 @@ Pronto, fique a vontade pra me esculachar agora =D
 
 Até a próxima, ou não! ;)
 
+PS: A quem quiser algo mais concreto de Zend Framework, o "@guilhermeblanco":http://twitter.com/guilhermeblanco tem um projeto que é o esqueleto de uma aplicação em Zend Framework e Doctrine 2. Mesmo que você não use o Doctrine 2, o projeto vale uma olhada: https://github.com/guilhermeblanco/Zend1-Doctrine2-Skeleton
