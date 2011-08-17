@@ -8,7 +8,7 @@ published: true
 
 Esse texto/post é longo. Meu intuito é uma série de posts deste tipo usando uma metáfora expressando meu conhecimento (ou a falta dele) relacionada ao desenvolvimento de software de forma geral.
 
-Se de alguma forma esse texto ajudar você, me ajude também: divulgando o post, comentando, me xingando, corringindo o post ou sugerindo histórias para esta série (afinal este blog é repositório Git no GitHub). Acredite, eu também gosto de sair, comprar jeans, toalhas e ocasionalmente tentar construir uma pirâmide Gizé, escrever posts já é cansativo e demanda muito tempo, escrever posts longos assim ... mais ainda. =)
+Se de alguma forma esse texto ajudar você, me ajude também: divulgando o post, comentando, me xingando, corringindo o post ou sugerindo histórias para esta série (afinal este blog é "repositório Git no GitHub":https://github.com/augustohp/augustohp.github.com). Acredite, eu também gosto de sair, comprar jeans, toalhas e ocasionalmente tentar construir uma pirâmide Gizé, escrever posts já é cansativo e demanda muito tempo, escrever posts longos assim ... mais ainda. =)
 
 h2. Tanto pra falar, porquê uma metáfora utilizar?
 
