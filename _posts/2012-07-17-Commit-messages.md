@@ -89,6 +89,9 @@ remover linhas de código? O que você deve procurar como resultado no código e
 como ele vai se comportar? As mensagens de commit são ótimas alternativas.
 indubitavelmente superiores aos comentários dentro do código.
 
+Exemplo
+-------
+
 Quer um exemplo bacana? O [Respect][respect] tem um projeto chamado [Foundation][foundation]
 cuja promessa é ser justamente a fundação que um desenvolvedor precisa para o
 desenvolvimento. O [Nickl-][nick] é um desenvolvedor que contribui bastante com
