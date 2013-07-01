@@ -19,7 +19,7 @@ h2. Show me the code!
 
 Pela documentação do NodeJS o "EventEmitter":http://nodejs.org/docs/v0.4.2/api/events.html pode ser utilizado da seguinte forma:
 
-{% highlight javascript linenos %}
+<pre class="line-numbers"><code class="language-javascript">
 var Events       = require('events');
 var EventEmitter = Events.EventEmitter();
 
@@ -28,11 +28,11 @@ EventEmitter.on('chorar', function(para) {
 });
 
 EventEmitter.emit('chorar','Mamãe'); // Acabaram de chorar para Mamãe
-{% endhighlight %}
+</code></pre>
 
 O código acima não é lá muito útil se estivermos usando Orientação a Objetos e os módulos do NodeJS, útil ele pode até ser, mas prático não. Então como incorporar isso em uma de nossas classes?
 
-{% highlight javascript linenos %}
+<pre class="line-numbers"><code class="language-javascript">
 var EventEmitter = require('events').EventEmitter();
 
 function Pessoa(nome) {
@@ -53,7 +53,7 @@ Kiko.on('chorar', function(agressor) {
 })
 
 SeuMadruga.beliscar(Kiko);
-{% endhighlight %}
+</code></pre>
 
 Como você pode notar, não requer prática muito menos habilidade. Deixe sua imaginação brilhar agora - longe de mim, por favor. =P
 

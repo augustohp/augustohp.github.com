@@ -43,7 +43,8 @@ A primeira falha do Singleton, não está nele. Está nas pessoas que implementa
 Vamos entender de novo pra que serve o Singleton: precisamos ter uma instância só de uma classe.
 Você entendeu bem esse problema? Tem certeza?! Vou te mostrar como você ainda não entendeu o problema:
 
-{% highlight php linenos %}
+<pre class="line-numbers"><code>
+<?php
 class Zend_Controller_Front
 {
     // ....
@@ -61,7 +62,8 @@ class Zend_Controller_Front
         return self::$_instance;
     }
 }
-{% endhighlight %}
+?>
+</code></pre>
 
 O uso do Singleton aí em cima é de um exemplo real. Do Zend Framework. Ele está certo? Não.
 
@@ -79,7 +81,8 @@ h2. Os problemas só começaram
 
 Eu sinceramente não entendo o porquê do Singleton no Front Controller, mas olha o tipo de problema que ele gera:
 
-{% highlight php linenos %}
+<pre class="line-numbers"><code>
+<?php
 class Zend_Controller_Front
 {
     // ....
@@ -120,7 +123,8 @@ class Zend_Controller_Front
         Zend_Controller_Action_HelperBroker::resetHelpers();
     }
 }
-{% endhighlight %}
+?>
+</code></pre>
 
 A gente precisa de um método, que "simule" a criação de uma nova instância da classe. Porque precisamos disso se é só dar um _new_ e tá tudo certo? Porque fizemos um Singleton.
 

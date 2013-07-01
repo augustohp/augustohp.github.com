@@ -16,30 +16,32 @@ h2. Não possibilitam validação nem formatação
 
 Se você trabalha já com objetos, porquê regredir e começar a usar arrays? Regredir sim. Veja o exemplo a seguir:
 
-{% highlight php linenos %}
+<pre><code>
 <?php
 class Arquivo {
     protected $_path;
-    
+
     public function setPath($s) {
         $this->_path = $s;
     }
-    
+
     public function getPath() {
         return $this->_path;
     }
 }
-{% endhighlight %}
+?>
+</code></pre>
 
 Não sei se você nota a riqueza que utilizar classes lhe proporciona. Mas logo de cara, sabemos que uma instância da classe _Arquivo_ poderá possuir um atributo contendo o _path_ daquele arquivo. Note também que a maioria das coisas é auto explicativa. Você não precisa ler muito código para chegar a conclusão que essa classe representa um arquivo e irá conter informações sobre ele.
 
 Agora se quiséssemos algo parecido mas utilizando array, poderíamos fazer assim:
 
-{% highlight php linenos %}
+<pre><code>
 <?php
 $arquivo         = array();
 $arquivo['path'] = "";
-{% endhighlight %}
+?>
+</code></pre>
 
 Bem menos código certo? Alguns podem argumentar que usar arrays também é mais rápido que utilizar objetos *mas garanto a você que a diferença de performance é extremamente ridícula* (coloco benchmarks aqui mais tarde).
 
