@@ -42,11 +42,10 @@ o [arquivo que declara as funções](https://github.com/c9s/PHPUnit_TestMore/blo
 que serão utilizadas.
 
 
-{% highlight php linenos %}
-    <?php
+<pre class="line-numbers"><code>
     if( ! defined('DEBUG_BACKTRACE_PROVIDE_OBJECT') )
         define( 'DEBUG_BACKTRACE_PROVIDE_OBJECT' , true );
-{% endhighlight %}
+</code></pre>
 
 A constante ```DEBUG_BACKTRACE_PROVIDE_OBJECT``` passou a existir somente na 
 versão 5.3.6 quando a assinatura da função [debug_backtrace()](http://www.php.net/manual/pt_BR/function.debug-backtrace.php)
@@ -56,8 +55,7 @@ O que está sendo feito é a declaração da constante a fim de que ela exista e
 tenha o mesmo resultado da chamada de função em todas as versões. Uma olhadinha
 na documentação do PHP pode resolver dúvidas em relação à isso.
 
-{% highlight php linenos %}
-    <?php
+<pre class="line-numbers"><code>
     function ok( $v , $msg = null )
     {
         $stacks = debug_backtrace( DEBUG_BACKTRACE_PROVIDE_OBJECT ); 
@@ -65,7 +63,7 @@ na documentação do PHP pode resolver dúvidas em relação à isso.
         $testobj->assertTrue( $v ? true : false , $msg );
         return $v ? true : false;
     }
-{% endhighlight %}
+</code></pre>
 
 Aí temos a primeira função, que obrigatoriamente recebe um argumento. A assinatura
 da função é a mesma do método que ela utiliza, por motivos óbvios isso já é extremamente
@@ -85,14 +83,13 @@ Sabendo disso, no índice 1 (um) do *backtrace* está a instância do objeto que
 o *TestCase* onde a função foi chamada, ele salva uma referência à este objeto na variável
 ```$testObj``` e faz a chamada de asserção que ele deseja.
 
-{% highlight php linenos %}
-    <?php
+<pre class="line-numbers"><code>
     function dump($e)
     {
         var_dump($e);
         ob_flush();
     }
-{% endhighlight %}
+</code></pre>
 
 Menção den honra à última função: ```dump()```. Ela tem uma utilidade sim dentro
 da suite de testes, já que o PHPUnit gerencia o *[Output Buffer](http://www.php.net/manual/en/book.outcontrol.php)* 
@@ -110,14 +107,13 @@ Considerações
 Existem obviamente outras formas de se fazer a mágica de consumir métodos de instâncias
 já existentes:
 
-{% highlight php linenos %}
-    <?php
+<pre class="line-numbers"><code>
     function ok(PHPUnit_Framework_TestCase $testobj, $v , $msg = null)
     {
         $testobj->assertTrue( $v ? true : false , $msg );
         return $v ? true : false;
     }
-{% endhighlight %}
+</code></pre>
 
 Na forma acima, sempre temos que passar a instância do *TestCase* na chamada da
 função, o que é um pouco menos elegante do que a solução anterior mas muito mais
