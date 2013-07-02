@@ -1,10 +1,10 @@
-Vagrant.configure("1") do |config|
+Vagrant.configure("2") do |config|
 
   config.vm.box = "precise64"
-  config.vm.host_name = "blog.localhost"
+  config.vm.hostname = "blog.localhost"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-  config.vm.forward_port 4000, 8081
-  config.vm.share_folder('var-www', '/var/www', './')
+  config.vm.network :forwarded_port, guest: 4000, host: 8081, auto_correct: true
+  config.vm.synced_folder ".", "/var/www"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "./.puppet/manifests"

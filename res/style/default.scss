@@ -1,0 +1,105 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "normalize";
+
+/* Styles */
+body {
+	color: $text-color;
+	::-moz-selection {
+	    background: $text-highlight-color;
+	    text-shadow: none;
+	}
+
+	::selection {
+	    background: $text-highlight-color;
+	    text-shadow: none;
+	}
+	@include media($desktop) {
+		font-size: $desktop-font-size;
+		line-height: $desktop-line-height;
+	}
+	@include media($mobile) {
+		font-size: $mobile-font-size;
+		line-height: $mobile-line-height;
+	}
+}
+h1, h2, h3, h4, h5, h6 { font-weight: bold; margin: 0; padding: 0; color: $text-color; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.15em; }
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover { color: lighten($link-color, 25%); }
+	&:visited { color: darken($link-color, 25%); }
+}
+
+/* Layout */
+#container {
+	@include outer-container;
+	@include media($desktop) { padding-top: $desktop-line-height*2; }
+	@include media($mobile) { padding-top: $desktop-line-height*1; }
+}
+.sidebar {
+	color: $sidebar-color;
+	p { color: $sidebar-alt-color; }
+	@include media($desktop) { 
+		@include span-columns(2); 
+		font-size: 12px;
+		text-align: right;
+		a { color: $text-color; &:hover { color: $text-color; } &:visited { color: $text-color; }}
+	}
+	@include media($mobile) { 
+		@include span-columns(4); 
+		font-size: $mobile-font-size;
+	}
+}
+.page {
+	@include media($desktop) { @include span-columns(8); }
+	@include media($mobile) { @include span-columns(4); }
+	h1 {
+		@include row;
+		color: $text-color;
+		a {
+			text-decoration: none;
+			&:hover { color: $text-color; }
+			&:visited { color: $text-color; }
+		}
+		a[rel=home] {
+			text-align: left;
+			@include media($desktop) { @include span-columns(5); }
+			@include media($mobile) { @include span-columns(4); }
+		}
+		a[rel=me] {
+			text-align: right;
+			@include media($desktop) { @include span-columns(5); }
+			@include media($mobile) { display: none; }
+		}
+	}
+
+	.posts { margin: 0; padding: 0; list-style-type: none; }
+	.post {
+		@include fill-parent;
+		@include media($desktop) { margin-bottom: $desktop-line-height*2; }
+		@include media($mobile) { margin-bottom: $desktop-line-height*1; }
+		header {
+			@include row;
+			.date {
+				text-decoration: none;
+				border: none;
+				color: lighten($text-color, 45%);
+				@include media($desktop) { @include span-columns(1); }
+				@include media($mobile) { @include span-columns(1); }
+			}
+			.title {
+				@include media($desktop) { @include span-columns(9); }
+				@include media($mobile) { @include span-columns(3); }
+			}
+		}
+		.content {
+			@include row;
+			@include fill-parent;
+		}
+	}
+}

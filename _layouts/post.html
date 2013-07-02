@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="posts language-php">
     <header>
-        <h2>{{ page.title }}</h2>
-        <h3>{{ page.date | date: "%d %b %y" }}</h3>
+        <h2 class="title">{{ page.title }}</h2>
+        <abbr class="date" title="{{ page.date | date: "%Y-%m-%dT00:00:00-03:00" }}"> {{ page.date | date: "%Y-%m-%d" }} </abbr>
     </header>
     
     <div class="post-content">

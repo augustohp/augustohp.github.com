@@ -5,8 +5,8 @@
           <meta name="language" content="pt-br">
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
           <title>Augusto Pascutti - {{ page.title }}</title>
-          <meta name="description" content="Augusto Pascutti's Tech Blog - PHP, Javascript, Development and stuff'">
-          <meta name="keywords" content"php, javascript, phpsp, development, open source, jquery, js" >
+          <meta name="description" content="Augusto Pascutti Blog - Desenvolvimento web, entre outras coisas">
+          <meta name="keywords" content="php, javascript, phpsp, development, open source" >
           <meta name="author" content="Augusto Pascutti">
           <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
           <link style="text/css" rel="stylesheet" href="/res/default.css?v2" />
@@ -14,17 +14,15 @@
           <link href="http://feeds.feedburner.com/augustopascutti/blog-augusto-pascutti" rel="alternate" title="/dev/null" type="application/atom+xml" />
     </head>
     <body>
-        <div id="page">
-            <div id="header">
-                <h1><a href="/">/dev/null</a></h1>
-                <h2>Lixeira virtual de Augusto Pascutti</h2>
-            </div>
-            <div id="content">
-                {{ content }}
-            </div>
-        </div>
-        <div id="footer">
-            <p>augusto [at] phpsp.org.br</p>
+        <div id="container">
+          <section class="sidebar">
+              <h1><a href="/" rel="home">/dev/null</a></h1>
+              <h2><a href="http://twitter.com/augustohp" rel="me">por @augustohp</a></h2>
+              <p>Algumas coisas acabam aqui...</p>
+          </section>
+          <section class="page">
+              {{ content }}
+          </section>
         </div>
         <script src="/res/prism.js"></script>
         <script type="text/javascript">
