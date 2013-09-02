@@ -1,27 +1,24 @@
 ---
 layout: default
 ---
-<div class="posts language-php">
+<article class="post">
     <header>
-        <h2>{{ page.title }}</h2>
-        <h3>{{ page.date | date: "%d %b %y" }}</h3>
+        <h2 class="title">{{ page.title }}</h2>
+        <abbr class="date" title="{{ page.date | date: "%Y-%m-%dT00:00:00-03:00" }}"> {{ page.date | date: "%Y-%m-%d" }} </abbr>
     </header>
-    
-    <div class="post-content">
+
+    <div class="content language-php">
     {{ content }}
     </div>
-</div>
+</article>
 
 <div id="disqus_thread"></div>
 <noscript>Por favor, habilite o javascript para ver os comentários</noscript>
 
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname  = 'augustopascuttisblog'; // required: replace example with your forum shortname
+    var disqus_shortname  = 'augustopascuttisblog';
     var disqus_identifier = "{{ page.id | replace:'/','-' }}";
     var disqus_url        = "http://blog.augustopascutti.com{{ page.url }}";
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';

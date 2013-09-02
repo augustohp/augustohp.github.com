@@ -1,0 +1,21 @@
+@import "neat/neat-helpers";
+
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: em(1088);
+$visual-grid: false;
+
+$mobile: new-breakpoint(max-width 480px 4);
+$desktop: new-breakpoint(min-width 768px 10);
+
+$sidebar-color: #1C5560;
+$sidebar-alt-color: #737373;
+$text-color: #000000;
+$text-highlight-color: #FBFFCD;
+$link-color: #001F36;
+
+$desktop-font-size: 16px;
+$desktop-line-height: 27px;
+$mobile-font-size: 14px;
+$mobile-line-height: 25px;
