@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excessões do PHP
+title: Exceptions nativas do PHP
 categories: [php, exceptions, oo]
 ---
 
