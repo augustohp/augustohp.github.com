@@ -92,22 +92,21 @@ indubitavelmente superiores aos comentários dentro do código.
 Exemplo
 -------
 
-Quer um exemplo bacana? O [Respect][respect] tem um projeto chamado [Foundation][foundation]
-cuja promessa é ser justamente a fundação que um desenvolvedor precisa para o
-desenvolvimento. O [Nickl-][nick] é um desenvolvedor que contribui bastante com
-o projeto e existe uma alteração relativamente grande que ele fez.
-É importante entender o impacto de uma grande alteração o que torna inevitável
-ler códigos de implementação e testes, tarefa que nem sempre é algo que alguém
-se candidataria a fazer. 
+O [debian][] recentemente (na *Jessie*) trocou o gerenciador de janelas padrão do
+[gnome][] pro [xfce][]. O anúncio pode ser lido, juntamente com as mudanças na
+distribuição diretamente [na mensagem de commit](http://bit.ly/1firxDv).
 
-Te convido a fazer isso no conjunto de alterações que ele fez. Mesmo sem nunca ter
-visto o projeto. Procure pelo pedaço de código que cada commit altera e tente
-entender o que foi feito e como o componente funciona. Para isso use a interface web
-do [Github][github-foundation] ou clone o repositório e veja no próprio Git se
-estiver inspirado.
+A mensagem de commit possui:
 
-Dê a devida importância às mensagens de commit. Todo desenvolvedor vai agradecer
-eternamente por isso.
+- A motivação da mudança.
+- Qual foi a mudança, além do *diff* de código deixar ela bem explícita.
+- Quais os casos em que esse commit pode ser revertido.
+- Qual o impacto do commit, para os usuários. (O valor entregue)
+
+Hoje, segundo meus julgamentos, ele já é um excelente commit mas daqui alguns 
+anos ela pode muito bem ser usada (também em conjunto com as mensagens de commit
+futuras relacionadas aos mesmos arquivos) pra contar a história do projeto: as decisões e 
+o porquê delas. Evitando erros futuros ou estimulando decisões parecidas.
 
 Conclusão
 ---------
