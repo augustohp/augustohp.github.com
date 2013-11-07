@@ -31,8 +31,21 @@ h3 { font-size: 1.15em; }
 a {
 	color: $link-color;
 	text-decoration: none;
-	&:hover { color: lighten($link-color, 25%); }
-	&:visited { color: darken($link-color, 25%); }
+	display: inline-block;
+	border-radius: 0.2em;
+	transition-duration: 0.5s;
+
+	&:hover { 
+	padding: 0.4em;
+	margin: 0.3em;
+  	-webkit-transform: scale(1.1) rotate(-2deg);
+  	-ms-transform: scale(1.1) rotate(-2deg);
+  	transform: scale(1.1) rotate(-2deg);
+  	background-color: $link-bg-color;
+  	color: lighten($link-color, 55);
+	}
+		
+	&:visited { color: desaturate(lighten($link-color, 22), 64) }
 }
 
 /* Layout */
