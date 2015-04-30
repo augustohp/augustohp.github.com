@@ -64,8 +64,9 @@ Sua IDE não vai transformar você num programador melhor, ela é uma ferramenta
 
 Exerça seu direito de nascença e seja livre de todas as ferramentas. Aprenda a usar as mais básicas e a fazer tudo com elas. Imponha esse limite a você mesmo e ganhe continuamente com ele. O caminho [esta][5] [cheio][6] [de ajuda][7].
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/vX4Hq6JQ6cbd5V" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/augustopascutti/porque-vim" title="Porque VIM?" target="_blank">Porque VIM?</a> </strong> from <strong><a href="//www.slideshare.net/augustopascutti" target="_blank">Augusto Pascutti</a></strong> </div>
+PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estão disponíveis][slides].
 
+[slides]: //www.slideshare.net/augustopascutti/porque-vim
 [grep]: https://en.wikipedia.org/wiki/Grep
 [5]: http://linuxcommand.org/learning_the_shell.php
 [6]: http://www.oreilly.com/openbook/debian/book/ch13_01.html
