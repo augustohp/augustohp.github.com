@@ -5,8 +5,6 @@ date: 2015-04-30
 category: Desenvolvimento
 ---
 
-# Por que VIM?
-
 Já escrevi sobre [meu ambiente][1] de trabalho antes então o fato deu usar [VIM][] não deveria ser novidade. Adoro discutir e observar como cada desenvolvedor trabalha no dia a dia mas odeio o fato de ter que compartilhar o editor que várias pessoas usam só pra demonstrar alguma habilidade - ou a falta dela.
 
 ## Eu não escolhi usar VIM, escolhi usar o terminal
