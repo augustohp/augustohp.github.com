@@ -1,3 +1,10 @@
 _site/*
 .vagrant*
 package.box
+*.swp
+.sass-cache
+res/style/neat/settings/*.scss
+res/style/neat/grid/*.scss
+res/default.css.map
+res/style/_site/
+_plugins

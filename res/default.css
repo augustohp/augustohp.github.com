@@ -373,18 +373,7 @@ a {
   color: #2980b9;
   text-decoration: underline;
   display: inline-block;
-  border-radius: 0.2em;
-  transition-duration: 0.5s; }
-  a:hover {
-    padding: 0.4em;
-    margin: 0.3em;
-    -webkit-transform: scale(1.1) rotate(-2deg);
-    -ms-transform: scale(1.1) rotate(-2deg);
-    transform: scale(1.1) rotate(-2deg);
-    background-color: #2980b9;
-    color: #fcfdfe; }
-  a:visited {
-    color: darkgray; }
+  border-radius: 0.2em; }
 
 /* Layout */
 #container {
