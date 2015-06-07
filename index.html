@@ -9,9 +9,6 @@ title: /dev/null
 		<abbr class="date" title="{{ post.date | date: "%Y-%m-%dT00:00:00-03:00" }}"> {{ post.date | date: "%Y-%m-%d" }} </abbr>
 		<h2 class="title"> <a href="{{ post.url }}">{{ post.title }}</a> </h2>
 	</header>
-	<div class="content">
-	{{ post.content | truncate:200 | textilize }}
-	</div>
 </li>
 {% endfor %}
 </ul>

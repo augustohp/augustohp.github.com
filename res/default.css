@@ -152,6 +152,12 @@ pre {
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
+blockquote {
+  background-color: #eee;
+  border-left: 3px solid #ddd;
+  margin-left: 0px;
+  padding-left: 25px;}
+
 /**
  * Address inconsistent and variable font size in all browsers.
  */
@@ -347,27 +353,31 @@ body {
     text-shadow: none; }
   @media screen and (min-width: 768px) {
     body {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 27px; } }
   @media screen and (max-width: 480px) {
     body {
       font-size: 14px;
-      line-height: 25px; } }
+      line-height: 25px;
+      padding: 10px 5px;} }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  margin: 0;
   padding: 0;
+  margin: 45px 0px 25px 0px;
   color: #000000; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 3em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 2.2em; }
+  h2.title {
+      font-size: 3em;}
 
 h3 {
-  font-size: 1.15em; }
+  font-size: 1.7em;
+  font-weight: normal;}
 
 a {
   color: #2980b9;
@@ -393,6 +403,8 @@ a {
 
 .sidebar {
   color: #1C5560; }
+  .sidebar h1 {
+    margin: 0;}
   .sidebar p {
     color: #737373; }
   @media screen and (min-width: 768px) {
@@ -413,11 +425,17 @@ a {
           color: #000000; } }
   @media screen and (max-width: 480px) {
     .sidebar {
-      float: left;
+      float: none;
       display: block;
       margin-right: 6.66667%;
       width: 100%;
       font-size: 14px; }
+      .sidebar h1, .sidebar h2 {
+        margin: 10px 0;}
+       .sidebar p {
+           visibility: collapse;
+           margin-bottom: 15px;
+       }
       .sidebar:last-child {
         margin-right: 0; } }
 
@@ -485,6 +503,9 @@ a {
   margin: 0;
   padding: 0;
   list-style-type: none; }
+  .page .posts h2 {
+    font-size: 2em;
+    margin: 0;}
 .page .post {
   width: 100%; }
   @media screen and (min-width: 768px) {
@@ -513,16 +534,17 @@ a {
             margin-right: 0; } }
       @media screen and (max-width: 480px) {
         .page .post header .date {
-          float: left;
+          float: none;
           display: block;
-          margin-right: 6.66667%;
-          width: 20%; }
+          text-align: right;
+          width: 100%; }
           .page .post header .date:last-child {
             margin-right: 0; } }
     @media screen and (min-width: 768px) {
       .page .post header .title {
         float: left;
         display: block;
+        margin-top: 0;
         margin-right: 2.5641%;
         width: 89.74359%; }
         .page .post header .title:last-child {
