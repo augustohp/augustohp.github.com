@@ -1,9 +1,49 @@
-source:      .
-destination: ./_site
-plugins:     ./_plugins
+title: /dev/null
+locale: pt_BR
+description: Algumas coisas acabam aqui...
+search: false
+comments: true
 
-future:      true
-lsi:         false
-pygments:    true
+source: .
+destination: ./_site
+sass:
+    sass_dir: _sass
+    style: compressed
+
+future: false
+lsi: false
+permalink: date
+highlihther: pygments
 markdown: kramdown
-permalink:   date
+kramdown:
+    input: GFM
+    auto_ids: true
+    footnote_nr: 1
+    entity_output: as_char
+    toc_levels: 1..2
+    use_coderay: true
+
+coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      table
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css: style
+
+owner:
+    name: Augusto Pascutti
+    email: augusto.hp@gmail.com
+    avatar: http://s.gravatar.com/avatar/89de242e444d231e9928320af0417571?s=200
+    disqus-shortname: augustohp
+    twitter: augustohp
+    facebook: augusto.pascutti
+    github: augustohp
+    stackexchange: http://stackoverflow.com/users/447920/augusto-pascutti
+    linkedin: augustohp
+    google:
+        plus: +AugustoPascutti
+        analytics: UA-5680712-1
+        verify: google4f7e8dd16865ac79.html
+
+# vim: et ts=4 sw=4:
