@@ -10,6 +10,7 @@ PS: a quem estou enganando =P
 *[Escalabilidade](#guia-do-mochileiro-para-escalabilidade)
 *[TDD: Test Driven Development com PHP](#tdd-test-driven-development-em-php-50min)
 *[Logs: O que eles comem, onde vivem e como se reproduzem](#logs-o-que-eles-comem-onde-vivem-e-como-se-reproduzem)
+*[Revisitando a Orientação a Objetos](#orientação-a-objetos)
 
 # TDD: Test Driven Development em PHP (50min)
 
@@ -71,6 +72,13 @@ Porque e quando DSLs são úteis e como introduzí-las no seu dia a dia.
 * [Slides](http://www.slideshare.net/augustopascutti/melhorando-sua-api-com-dsls)
 * [Avaliações](https://joind.in/event/php-experience-2016/melhorando-a-comunicao-da-api-atravs-de-dsl)
 
+# Orientação a Objetos
+
+O paradigma é muito mais do que uma sopa de letrinhas. Primeiro, a pessoa
+precisa entender o que define a OO como paradigma pra depois entender as
+ferramentas que ela oferece pra resolver os problemas. Veremos que, nem sempre,
+seguir todas as boas práticas rende um bom resultado e obviamente: como resolver
+esse problema e melhorar o design de nossas aplicações no dia a dia.
 
 ---------
 
