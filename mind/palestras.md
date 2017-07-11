@@ -1,4 +1,4 @@
-lastIndexlestras
+# Palestras
 
 Abaixo a lista de palestras, escrevo este parágrafo como promessa de manter esta
 lista sempre atualizada.
@@ -72,7 +72,7 @@ Porque e quando DSLs são úteis e como introduzí-las no seu dia a dia.
 * [Slides](http://www.slideshare.net/augustopascutti/melhorando-sua-api-com-dsls)
 * [Avaliações](https://joind.in/event/php-experience-2016/melhorando-a-comunicao-da-api-atravs-de-dsl)
 
-# Orientação a Objetos
+# Revisitando a Orientação a Objetos
 
 O paradigma é muito mais do que uma sopa de letrinhas. Primeiro, a pessoa
 precisa entender o que define a OO como paradigma pra depois entender as
@@ -82,7 +82,7 @@ esse problema e melhorar o design de nossas aplicações no dia a dia.
 
 ---------
 
-# Sobre Augusto Pascutti
+# Sobre
 
 ZCE, Co-fundador PHPSP, desenvolvedor, jardineiro e envagelista do XKCD.
 Developer for 10+ years. Fan of open source, developer groups (co-founded
