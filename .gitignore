@@ -5,3 +5,5 @@ package.box
 _plugins
 .sass-cache
 res/*
+mind/*/composer.lock
+mind/*/vendor
