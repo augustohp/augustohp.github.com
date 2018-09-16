@@ -1,49 +1,58 @@
-title: /dev/null
-locale: pt_BR
-description: Algumas coisas acabam aqui...
+title: "/dev/null"
+locale: "pt-BR"
+description: "Algumas coisas acabam aqui..."
 search: false
 comments: true
+remote_theme: "mmistakes/so-simple-theme"
+read_time: true
 
+timezone: America/Sao_Paulo
+date_format: "%Y-%m-%d"
 source: .
 destination: ./_site
-sass:
-    sass_dir: _sass
-    style: compressed
 
 future: false
 lsi: false
 permalink: date
-highlihther: pygments
+highlighter: rouge
 markdown: kramdown
 kramdown:
     input: GFM
     auto_ids: true
     footnote_nr: 1
     entity_output: as_char
-    toc_levels: 1..2
-    use_coderay: true
+    toc_levels: 1..6
 
-coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      table
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css: style
+author:
+    name: "Augusto Pascutti"
+    email: "augusto.hp@gmail.com"
+    picture: "http://s.gravatar.com/avatar/89de242e444d231e9928320af0417571?s=200"
+    twitter: "@augustohp"
+    links:
+        - title: LastFM
+          url: https://www.last.fm/user/augusto_hp
+          icon: fab fa-lastfm
+        - title: Mastodon
+          url: https://phpc.social/@augustohp
+          icon: fab fa-mastodon
+        - title: GitHub
+          url: https://github.com/augustohp
+          icon: fab fa-github
+        - title: LinkedIn
+          url: https://www.linkedin.com/in/augustohp
+          icon: fab fa-linkedin
+        - title: StackExchange
+          url: http://stackoverflow.com/users/447920/augusto-pascutti
+          icon: fab fa-stack-exchange
 
-owner:
-    name: Augusto Pascutti
-    email: augusto.hp@gmail.com
-    avatar: http://s.gravatar.com/avatar/89de242e444d231e9928320af0417571?s=200
-    disqus-shortname: augustopascuttisblog
-    twitter: augustohp
-    facebook: augusto.pascutti
-    github: augustohp
-    stackexchange: http://stackoverflow.com/users/447920/augusto-pascutti
-    linkedin: augustohp
-    google:
-        plus: +AugustoPascutti
-        analytics: UA-5680712-1
-        verify: google4f7e8dd16865ac79.html
-
+google_analytics: UA-5680712-1
+disqus:
+    shortname: augustopascuttisblog
+twitter:
+    username: augustohp
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
 # vim: et ts=4 sw=4:
