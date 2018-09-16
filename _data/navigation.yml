@@ -1,7 +1,10 @@
 # Site navigation links
 
+- title: Início
+  url: /
+
 - title: Todos os Posts
-  url: /blog/
+  url: /posts
 
 - title: PHPSP
   url: http://phpsp.org.br/

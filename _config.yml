@@ -1,6 +1,7 @@
 title: "/dev/null"
 locale: "pt-BR"
 description: "Algumas coisas acabam aqui..."
+url: "http://blog.augustopascutti.com"
 search: false
 comments: true
 remote_theme: "mmistakes/so-simple-theme"
@@ -10,6 +11,14 @@ timezone: America/Sao_Paulo
 date_format: "%Y-%m-%d"
 source: .
 destination: ./_site
+plugins:
+  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-sitemap
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-sitemap
 
 future: false
 lsi: false
@@ -45,6 +54,8 @@ author:
           url: http://stackoverflow.com/users/447920/augusto-pascutti
           icon: fab fa-stack-exchange
 
+feed:
+    path: atom.xml
 google_analytics: UA-5680712-1
 disqus:
     shortname: augustopascuttisblog
