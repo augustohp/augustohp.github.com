@@ -53,7 +53,22 @@ author:
         - title: StackExchange
           url: http://stackoverflow.com/users/447920/augusto-pascutti
           icon: fab fa-stack-exchange
-
+footer_links:
+    - title: LastFM
+      url: https://www.last.fm/user/augusto_hp
+      icon: fab fa-lastfm
+    - title: Mastodon
+      url: https://phpc.social/@augustohp
+      icon: fab fa-mastodon
+    - title: GitHub
+      url: https://github.com/augustohp
+      icon: fab fa-github
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/augustohp
+      icon: fab fa-linkedin
+    - title: StackExchange
+      url: http://stackoverflow.com/users/447920/augusto-pascutti
+      icon: fab fa-stack-exchange
 feed:
     path: atom.xml
 google_analytics: UA-5680712-1
