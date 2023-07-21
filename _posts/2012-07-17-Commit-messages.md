@@ -94,7 +94,7 @@ Exemplo
 
 O [debian][] recentemente (na *Jessie*) trocou o gerenciador de janelas padrão do
 [gnome][] pro [xfce][]. O anúncio pode ser lido, juntamente com as mudanças na
-distribuição diretamente [na mensagem de commit](http://bit.ly/1firxDv).
+distribuição diretamente [na mensagem de commit][commit].
 
 A mensagem de commit possui:
 
@@ -118,6 +118,7 @@ Se tudo for como eu espero, todas suas próximas mensagens de commit serão algo
 que valha ser lido ao invés de ser algum pedaço de texto que alguma ferramenta
 estúpida requer repetidamente a fim de fazer algo.
 
+[commit]: https://salsa.debian.org/installer-team/tasksel/-/commit/dfca406eb694e0ac00ea04b12fc912237e01c9b5
 [respect]: https://github.com/Respect "GitHub: Componentes do Respect"
 [foundation]: https://github.com/Respect/Foundation "GitHub: Repositório do Respect/Foundation"
 [nick]: https://github.com/nickl- "GitHub: Repositórios do Nickl-"
