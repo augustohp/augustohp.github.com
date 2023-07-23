@@ -66,7 +66,7 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 
 [slides]: //www.slideshare.net/augustopascutti/porque-vim
 [grep]: https://en.wikipedia.org/wiki/Grep
-[5]: http://linuxcommand.org/learning_the_shell.php
+[5]: http://web.archive.org/web/20170718104420/http://www.linuxcommand.org:80/learning_the_shell.php
 [6]: http://www.oreilly.com/openbook/debian/book/ch13_01.html
 [7]: http://www.amazon.com/Power-Tools-Third-Shelley-Powers/dp/0596003307
 [vim]: http://www.vim.org/

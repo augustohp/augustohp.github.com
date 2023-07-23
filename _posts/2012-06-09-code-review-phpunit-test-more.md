@@ -10,8 +10,8 @@ meses atrás, que me fez aprender uma coisa (maldosa, diga-se de passagem) que
 definitivamente nem imaginava ser possível com PHP.
 
 O componente na verdade é uma série de funções que nada mais são que atalhos
-para os métodos de asserção existentes na classe ```PHPUnit_Framework_TestCase```.
-Resumindo: ao invés de chamar ```$this->assertTrue()``` você pode usar ```ok()```
+para os métodos de asserção existentes na classe `PHPUnit_Framework_TestCase`.
+Resumindo: ao invés de chamar `$this->assertTrue()` você pode usar `ok()`
 e ter o mesmo resultado.
 
 Estrutura
@@ -38,16 +38,16 @@ Review
 ------
 
 A revisão deste código deve ser bem simples e direta, vamos examinar por enquanto
-o [arquivo que declara as funções](https://github.com/c9s/PHPUnit_TestMore/blob/master/src/PHPUnit/TestMore.php) 
+o [arquivo que declara as funções][1] 
 que serão utilizadas.
 
 
-<pre class="line-numbers"><code>
+```php
     if( ! defined('DEBUG_BACKTRACE_PROVIDE_OBJECT') )
         define( 'DEBUG_BACKTRACE_PROVIDE_OBJECT' , true );
-</code></pre>
+```
 
-A constante ```DEBUG_BACKTRACE_PROVIDE_OBJECT``` passou a existir somente na 
+A constante `DEBUG_BACKTRACE_PROVIDE_OBJECT` passou a existir somente na 
 versão 5.3.6 quando a assinatura da função [debug_backtrace()](http://www.php.net/manual/pt_BR/function.debug-backtrace.php)
 sofreu alteração.
 
@@ -55,7 +55,7 @@ O que está sendo feito é a declaração da constante a fim de que ela exista e
 tenha o mesmo resultado da chamada de função em todas as versões. Uma olhadinha
 na documentação do PHP pode resolver dúvidas em relação à isso.
 
-<pre class="line-numbers"><code>
+```php
     function ok( $v , $msg = null )
     {
         $stacks = debug_backtrace( DEBUG_BACKTRACE_PROVIDE_OBJECT ); 
@@ -63,7 +63,7 @@ na documentação do PHP pode resolver dúvidas em relação à isso.
         $testobj->assertTrue( $v ? true : false , $msg );
         return $v ? true : false;
     }
-</code></pre>
+```
 
 Aí temos a primeira função, que obrigatoriamente recebe um argumento. A assinatura
 da função é a mesma do método que ela utiliza, por motivos óbvios isso já é extremamente
@@ -81,17 +81,17 @@ da função.
 
 Sabendo disso, no índice 1 (um) do *backtrace* está a instância do objeto que é
 o *TestCase* onde a função foi chamada, ele salva uma referência à este objeto na variável
-```$testObj``` e faz a chamada de asserção que ele deseja.
+`$testObj` e faz a chamada de asserção que ele deseja.
 
-<pre class="line-numbers"><code>
+```php
     function dump($e)
     {
         var_dump($e);
         ob_flush();
     }
-</code></pre>
+```
 
-Menção den honra à última função: ```dump()```. Ela tem uma utilidade sim dentro
+Menção den honra à última função: `dump()`. Ela tem uma utilidade sim dentro
 da suite de testes, já que o PHPUnit gerencia o *[Output Buffer](http://www.php.net/manual/en/book.outcontrol.php)* 
 para conseguir imprimir o formato desejado do resultado da execução dos testes, 
 seja ele: os famigerados pontos (.), o [TestDox](https://en.wikipedia.org/wiki/TestDox) 
@@ -107,13 +107,13 @@ Considerações
 Existem obviamente outras formas de se fazer a mágica de consumir métodos de instâncias
 já existentes:
 
-<pre class="line-numbers"><code>
+```php
     function ok(PHPUnit_Framework_TestCase $testobj, $v , $msg = null)
     {
         $testobj->assertTrue( $v ? true : false , $msg );
         return $v ? true : false;
     }
-</code></pre>
+```
 
 Na forma acima, sempre temos que passar a instância do *TestCase* na chamada da
 função, o que é um pouco menos elegante do que a solução anterior mas muito mais
@@ -133,3 +133,6 @@ O caso acima é um caso à parte:
 
 Enfim, espero que tenha curtido minha primeira revisão pública de código. Não deixe
 de criticar ou deixar seu comentário!
+
+[1]: https://github.com/c9s/PHPUnit_TestMore/blob/2e32ab6f6952e65d1e661855d8d110bf9fa0772d/TestMore.php 
+

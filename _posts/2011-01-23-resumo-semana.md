@@ -24,7 +24,7 @@ não tenho. Pessoas que contribuem muito com a linguagem e a web em
 geral. Conversar com elas vale muito mais do que a leitura de uma dúzia
 de livros.
 
-Eu e o [Dohms](http://www.rafaeldohms.com.br) tivemos a oportunidade de
+Eu e o [Dohms][1] tivemos a oportunidade de
 palestrar de novo na Campus Party. Ele palestrou sobre como você pode
 crescer utilizando PHP, como você pode trilhar seu caminho nessa
 linguagem que cresce a cada dia; já eu ataquei os quatro principais
@@ -85,3 +85,5 @@ Veja mais apresentações
     version do Drupal depois de quase 3 anos de desenvolvimento. O
     Drupal dispensa apresentações, mas se você não conhece;
     definitivamente deveria dar uma olhada.
+
+[1]: http://web.archive.org/web/20121106162819/http://www.rafaeldohms.com.br:80/

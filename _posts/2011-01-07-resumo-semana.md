@@ -43,15 +43,16 @@ atualizo o post.
 ## Posts
 
 -   [Status da integração contínua no
-    PHP](http://www.littlehart.net/atthekeyboard/2010/09/07/twitter-asks-continuous-integration-landscape-for-php-developers/):
+    PHP](https://web.archive.org/web/20100912001907/www.littlehart.net/atthekeyboard/2010/09/07/twitter-asks-continuous-integration-landscape-for-php-developers/):
     Este post descreve (do ponto de vista do autor), qual o estado atual
     de quem utiliza integração contínua no dia a dia desenvolvendo
     aplicações PHP. Se você quer começar a ter algum contato com isso, o
     post vale a leitura.
--   [Crie seu próprio widget de
-    Twitter](http://blogs.sitepoint.com/2011/01/05/create-your-own-twitter-widget-1/):
+-   [Crie seu próprio widget de Twitter][1]:
     É uma série de 3 posts que mostra como você pode interagir com a API
     do Twitter. Os códigos utilizados não são algo que você deveria
     seguir como exemplo de bom código; mas se você não conhece a API do
     Twitter e está começando com Orientação a Objetos, essa série pode
     te ajudar um pouco.
+
+[1]: http://web.archive.org/web/20110304231046/http://blogs.sitepoint.com:80/2011/01/05/create-your-own-twitter-widget-1/

@@ -210,7 +210,8 @@ Reuni alguns posts que valem ser lidos que achei em uma busca rápida
 pelo santo Google. São pessoas muito mais inteligentes que eu e você,
 muito mais experientes e que provavelmente sabem o que estão falando.
 
--   [Singleton considerado
-    estúpido](https://sites.google.com/site/steveyegge2/singleton-considered-stupid)
--   [Porque evitar o uso do
-    Singleton](http://www.as3dp.com/2008/11/26/we-don%E2%80%99t-need-no-stinkin%E2%80%99-singletons-why-to-avoid-the-singleton-pattern-in-actionscript-30-programming)
+-   [Singleton considerado estúpido][2]
+-   [Porque evitar o uso do Singleton][1]
+
+[1]: https://web.archive.org/web/20081218140813/http://www.as3dp.com/2008/11/26/we-don%E2%80%99t-need-no-stinkin%E2%80%99-singletons-why-to-avoid-the-singleton-pattern-in-actionscript-30-programming/
+[2]: https://sites.google.com/site/steveyegge2/singleton-considered-stupid

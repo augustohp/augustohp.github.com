@@ -302,7 +302,7 @@ post. Eles são uns 👼 !
 
 [1]: http://blog.augustopascutti.com/orientação%20a%20objetos/2015/06/25/oo-setters-getters.html
 [2]: http://media.pragprog.com/articles/jan_03_enbug.pdf
-[3]: https://pragprog.com/articles/tell-dont-ask
+[3]: http://web.archive.org/web/20121227021359/http://pragprog.com:80/articles/tell-dont-ask
 [4]: http://martinfowler.com/bliki/TellDontAsk.html
 [5]: http://c2.com/cgi/wiki?TellDontAsk
 [6]: https://robots.thoughtbot.com/tell-dont-ask
