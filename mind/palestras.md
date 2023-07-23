@@ -98,4 +98,4 @@ PHPSP e host do PHPSPCast.
 *[Perfis Sociais](http://about.me/augustohp): Meus perfis em diversas redes sociais
 *[Perfil do GitHub](http://github.com/augustohp): Meus códigos Open Source
 *[Blog Pessoal](http://augustopascutti.com): Quando tem mais texto que código
-*[PHPSP](www.phpsp.org.br): Grupo de desenvolvedores PHP do Estado de São Paulo
+*[PHPSP](https://www.phpsp.org.br): Grupo de desenvolvedores PHP do Estado de São Paulo

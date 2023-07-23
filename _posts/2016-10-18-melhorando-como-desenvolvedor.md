@@ -38,7 +38,7 @@ ser mais preguiçoso e **pare de reinventar a roda**.
 
 [1]: http://bit.ly/2ecTfdz "Wikipedia: Isaac Azimov. Não conhece? Leia 'O fim da eternidade'"
 [2]: http://bit.ly/porque-vim "Palestra: Por que VIM? Uma palestra sobre limitações, não um editor."
-[3]: http://nflx.it/2enRQNC "Documentário: Jiro Dreams of Sushi."
+[3]: https://www.imdb.com/title/tt1772925 "Documentário: Jiro Dreams of Sushi."
 [4]: http://bit.ly/2dnHDjk "A filosofia Unix é sobre pequenos programas, que juntos fazem muito. Não o tamanho deles."
 [5]: http://bit.ly/2ebFhaA "Agregação de notícias: Hacker News. 3 horas te ajudam a escapar dos hype-links. Acredite em mim, você não quer eles."
 [6]: http://bit.ly/2dnHDjk "Será que alguém lê isso?"

@@ -283,7 +283,7 @@ de comunicação que impede os problemas de acontecerem.
 Eu não falei quase nada sobre o [TDA][], então vá ler mais a respeito:
 
 * O [Andy Hunt e o Dave Thomas][pp] publicaram um [artigo no IEEE][2] além de
-  [outro bem mais detalhado no blog deles][3]. Eu aconselho bastante a você
+  [outro bem mais detalhado no blog deles][tda]. Eu aconselho bastante a você
   ler eles! Eu podia ter colocado esses links na introdução e não ter escrito
   absolutamente mais nada, mas como eu [peguei feijão e strogonoff hoje][self],
   considerem esses links o strogonoff.
@@ -302,13 +302,12 @@ post. Eles são uns 👼 !
 
 [1]: http://blog.augustopascutti.com/orientação%20a%20objetos/2015/06/25/oo-setters-getters.html
 [2]: http://media.pragprog.com/articles/jan_03_enbug.pdf
-[3]: https://pragprog.com/articles/tell-dont-ask
+[tda]: http://web.archive.org/web/20121227021359/http://pragprog.com:80/articles/tell-dont-ask
 [4]: http://martinfowler.com/bliki/TellDontAsk.html
 [5]: http://c2.com/cgi/wiki?TellDontAsk
 [6]: https://robots.thoughtbot.com/tell-dont-ask
 [anemic-models]: https://en.wikipedia.org/wiki/Anemic_domain_model
 [clean]: http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
-[tda]: https://pragprog.com/articles/tell-dont-ask
 [ddd]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
 [srp]: https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view?pli=1 "Uncle Bob: Single Responsability Principle"
 [ar]: https://en.wikipedia.org/wiki/Active_record_pattern

@@ -34,18 +34,18 @@ grite comigo pelo twitter
     de cima, o Propel na próxima *major version* passará a utilizar a
     camada de abstração de banco do Doctrine 2 (DBAL) e partes do ORM do
     Doctrine 2. [Post de
-    anúncio](http://propel.posterous.com/propel2-will-be-an-activerecord-implementatio)
+    anúncio](https://web.archive.org/web/20130330062952/http://propel.posterous.com/propel2-will-be-an-activerecord-implementatio)
 
 ## Posts
 
 -   [**Usando o SDK do Facebook para executar
-    FQL**](http://blog.rafaeldohms.com.br/2011/01/12/using-the-facebook-php-sdk-to-run-fql/):
+    FQL**](https://web.archive.org/web/20110115071951/blog.rafaeldohms.com.br/2011/01/12/using-the-facebook-php-sdk-to-run-fql/):
     O Facebook está numa fase de migração das APIs atuais. Sendo claro,
     a situação está uma zona. Neste post o rafael Dohms nos mostra como
     usar a FQL (consultas SQL dos dados do Facebook) usando o SDK em
     PHP. (em inglês)
 -   [**Database version
-    control**](http://techportal.ibuildings.com/2011/01/11/database-version-control/):
+    control**](https://web.archive.org/web/20120416014709/http://techportal.ibuildings.com/2011/01/11/database-version-control/):
     Este artigo é bem legal. Ele cobre algumas alternativas sobre como
     você pode versionar seu banco de dados. (em inglês)
 -   [**Facebook Hacker
@@ -54,19 +54,19 @@ grite comigo pelo twitter
     Parabéns aos qualificados. Quem não participou, pode pegar os 3
     problemas e tentar resolver. (em inglês)
 -   [**Testando
-    Traits**](http://sebastian-bergmann.de/archives/906-Testing-Traits.html):
+    Traits**](https://web.archive.org/web/20110119152057/https://sebastian-bergmann.de/archives/906-Testing-Traits.html):
     O Sebastian Bergman, criador do PHPUnit, postou essa semana como
     você poderá fazer testes unitários na funcionalidade que será
     adicionada no PHP 5.4. A funcionalidade já está disponível no
     *master* branch do PHPUnit e será lançado na versão 3.6 do PHPUnit.
     (em inglês)
 -   [**Futuro do
-    Hudson**](http://hudson-labs.org/content/hudsons-future):
+    Hudson**](https://web.archive.org/web/20110112133740/http://hudson-labs.org/content/hudsons-future):
     Provavelmente ele mude de nome conforme proposta pelos líderes do
     projeto num post essa semana. Essa não é relacionada diretamente ao
     PHP, mas bateu na tabela e aqui está. (em inglês)
 -   [**Resumo da semana por Ailton
-    Ribeiro**](http://lab.ailtonribeiro.com/log/pt-br/trivias/resumo-da-semana-01-2011/):
+    Ribeiro**](https://web.archive.org/web/20110221092229/lab.ailtonribeiro.com/log/pt-br/trivias/resumo-da-semana-01-2011/):
     O Ailton Ribeiro tem uma iniciativa idêntica a minha, porém foca nos
     assuntos de interesse dele, que eu diria; são de relevância a todos
     envolvidos nesta área.

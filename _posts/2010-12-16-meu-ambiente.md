@@ -5,8 +5,7 @@ category: PHP
 date: 2010-12-16
 ----
 
-Seguindo a brincadeira iniciada pelo meu caro amigo [Anderson Casimiro
-(duodraco)](http://duodra.co/post/seu-ambiente-de-trabalho-em-7-itens/)
+Seguindo a brincadeira iniciada pelo meu caro amigo [Anderson Casimiro (duodraco)][1]
 vou descrever o que uso no meu dia a dia ...
 
 Se você estiver com preguiça de seguir o link, as regras são essas:
@@ -88,13 +87,15 @@ criarem os respectivos posts, colocarei os links aqui):
 -   Guilherme Blanco
 -   Alexandre Taz
 -   Alex Piaz
--   [Adler
-    Medrado](http://blog.adlermedrado.com.br/meme-meu-ambiente-de-trabalho-em-7-itens)
--   [Jair
-    Henrique](http://www.jairhenrique.com/2010/12/meu-ambiente-de-trabalho/)
+-   [Adler Medrado][2]
+-   [Jair Henrique][3]
 
 *Updates:*
 
-[^1]: O **Alfred** provavelmente mude de nome, conforme
-    [anunciado](http://hudson-labs.org/content/hudsons-future) em 11 de
+[^1]: O **Alfred** provavelmente mude de nome, conforme [anunciado][4] em 11 de
     janeiro de 2011.
+
+[1]: http://web.archive.org/web/20130114230111/http://duodra.co/post/seu-ambiente-de-trabalho-em-7-itens/
+[2]: http://web.archive.org/web/20111219153432/http://blog.adlermedrado.com.br:80/ 
+[3]: http://web.archive.org/web/20120321031000/http://www.jairhenrique.com:80/2010/12/meu-ambiente-de-trabalho/
+[4]: http://web.archive.org/web/20110114222043/http://www.hudson-labs.org:80/content/hudsons-future?

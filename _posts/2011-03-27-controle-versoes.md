@@ -101,7 +101,7 @@ experiência razoável e são software-livre.
 
 Existem outros, como:
 
--   [Mercurial](http://mercurial.selenic.com/)
+-   [Mercurial](https://www.mercurial-scm.org/)
 -   [Bazaar](http://en.wikipedia.org/wiki/Bazaar_(software))
 -   [Monotone](http://www.monotone.ca/)
 -   [Perforce](http://www.perforce.com/)
