@@ -36,8 +36,8 @@ resolvido? Pense nisso.
 
 Livros e sites que você deveria ler e ler e ler e ler de novo:
 
--   [PHP.net](http://www.php.net)
--   [PHPDeveloper](http://www.phpdeveloper.org)
+-   [PHP.net](https://www.php.net)
+-   [PHPDeveloper](https://web.archive.org/phpdeveloper.org/)
 -   PHP Objetos Padrões e Prática - Matt Zandstra
 -   PHP Power Programming - Derick Rethans, Andi Gutmans, (Nunca lembro
     o nome desse terceiro)

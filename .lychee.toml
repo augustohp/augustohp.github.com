@@ -4,7 +4,7 @@
 # https://github.com/lycheeverse/lychee
 
 #############################  Display  #############################
-verbose = "debug"
+verbose = "info"
 no_progress = false
 output = "report-broken-links.md"
 
@@ -34,7 +34,7 @@ base = "https://blog.augustopascutti.com"
 skip_missing = false
 include_verbatim = false
 glob_ignore_case = false
-exclude = ['^(http|https):\/\/(?:www\.)?twitter\.com\/.*', '^(http|https)://(?:www\.)?x\.com/.*', '^http://mtgapi\.com/api/v1/fetch/id', '^https://www\.mysql\.com']
+exclude = ['^(http|https):\/\/(?:www\.)?twitter\.com\/.*', '^(http|https)://(?:www\.)?x\.com/.*', '^http://mtgapi\.com/api/v1/fetch/id', '^https://www\.mysql\.com', '^https://www\.gnu\.org', '^https://web\.archive\.org']
 exclude_path = ["_drafts", "bin", "res", ".github"]
 include = []
 exclude_all_private = false

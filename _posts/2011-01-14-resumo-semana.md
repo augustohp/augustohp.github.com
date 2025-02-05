@@ -18,11 +18,13 @@ grite comigo pelo twitter
     (essa não é uma notícia nova). A grande novidade nesta versão é a
     adição dos Traits e essa semana já começou com uma discussão sobre o
     dito cujo.
--   [**Nova versão do PHP.net**](http://docs.php.net/): É isso aí.
+-   [**Nova versão do PHP.net**][php-new]: É isso aí.
     Depois de anos com a mesma cara, o site do nosso querido PHP está
     passando por uma cirurgia plástica sob os cuidados do
-    [@bjori](http://www.twitter.com/bjori). Você pode conferir como a
-    coisa está ficando [aqui](http://docs.php.net/).
+    [@bjori](https://www.twitter.com/bjori). Você pode conferir como a
+    coisa está ficando [aqui][php-new].
+
+[php-new]: https://web.archive.org/web/20110408231101/http://docs.php.net/
 
 ## Ferramentas
 
@@ -49,7 +51,7 @@ grite comigo pelo twitter
     Este artigo é bem legal. Ele cobre algumas alternativas sobre como
     você pode versionar seu banco de dados. (em inglês)
 -   [**Facebook Hacker
-    Cup**](http://www.facebook.com/notes/facebook-engineering/announcing-the-facebook-2011-hacker-cup/467531498919):
+    Cup**](https://web.archive.org/www.facebook.com/notes/facebook-engineering/announcing-the-facebook-2011-hacker-cup/467531498919):
     As eliminatórias do Facebook Hacker Cup começaram e já terminaram.
     Parabéns aos qualificados. Quem não participou, pode pegar os 3
     problemas e tentar resolver. (em inglês)

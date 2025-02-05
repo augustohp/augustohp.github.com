@@ -23,7 +23,7 @@ atualizo o post.
     (MUUUUITA coisa depende delas). Fizeram um patch, enviaram e agora
     outras pessoas estão melhorando e garantindo que as coisas funcionem
     como deveriam. Software Livre é isso. [Mais
-    informações](http://news.php.net/php.internals/51158)
+    informações](https://web.archive.org/news.php.net/php.internals/51158)
 -   **Engraçado**: ~~A um ano atrás~~ Há um ano alguém abriu um bug no
     PHP porque a função number\_format() não estava retornando mais 0
     (zero) e sim *null* após a atualização para o PHP 5.3.1. Ninguém

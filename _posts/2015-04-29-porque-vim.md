@@ -86,5 +86,5 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 [httpd-proxy]: http://httpd.apache.org/docs/current/mod/mod_proxy.html
 [wordpress]: https://wordpress.com/
 [wikipedia]: https://wikipedia.org/
-[crawler]: http://blog.augustopascutti.com/hacks/unix/2013/09/02/Crawler-de-json-com-mongo-em-5-min.html
-[jtnimoy]: http://jtnimoy.com/blogs/projects/14881671-tron-legacy
+[crawler]: https://blog.augustopascutti.com/hacks/unix/2013/09/02/Crawler-de-json-com-mongo-em-5-min.html
+[jtnimoy]: https://web.archive.org/jtnimoy.com/blogs/projects/14881671-tron-legacy

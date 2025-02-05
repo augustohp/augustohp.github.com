@@ -100,8 +100,7 @@ escrever os posts, o que fazer então? Resumo do mês! O casamento
     [Rafael Dohms][3]. Eu não posso reproduzir o
     conteúdo da revista, mas se você entende um pouco de inglês, ela
     vale a assinatura.
--   [Micro
-    otimizações](http://www.xpertdeveloper.com/2010/10/php-coding-tips-for-performance-improvement/):
+-   [Micro otimizações][7]:
     O post está em inglês, só menciono ele aqui porque ele é um grande
     candidato a post ridículo do ano. Pela enésima vez consecutiva. Esse
     tipo de otimização não gera benefício algum pra aplicação alguma. Se
@@ -122,7 +121,7 @@ escrever os posts, o que fazer então? Resumo do mês! O casamento
     fez profilling do seu código, corra lá, dê uma lida e experimente. O
     gargalo está sempre onde você menos espera.
 -   [Como contribuir com o
-    ZF2](http://weierophinney.net/matthew/archives/255-How-to-Contribute-to-ZF2.html):
+    ZF2](https://web.archive.org/web/20200813173110/https://mwop.net/blog/255-How-to-Contribute-to-ZF2.html):
     Deseja contribuir com algum projeto Open Source e não sabe qual nem
     como? Ajude o Zend Framework 2 a sair do forno. O desenvolvimento
     dessa versão já está bem avançado, mas contribuir é muito mais fácil
@@ -150,3 +149,4 @@ esquina logo mais.
 [4]: http://web.archive.org/web/20130111015326/http://framework.zend.com:80/changelog/1.11.4/
 [5]: http://web.archive.org/web/20110619080238/http://erichogue.ca:80/2011/03/30/profiling-a-php-application/
 [6]: http://web.archive.org/web/20130104155834/http://gaigalas.net:80/
+[7]: https://web.archive.org/web/20150214061025/http://www.xpertdeveloper.com:80/2010/10/php-coding-tips-for-performance-improvement/
