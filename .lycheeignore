@@ -1,2 +1,0 @@
-(http|https):\/\/(?:www\.)?twitter.com\/.*
-http://mtgapi.com/api/v1/fetch/id

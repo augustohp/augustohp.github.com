@@ -1,0 +1,44 @@
+# lychee.toml
+#
+# Configuration for lychee (checks for broken links inside a directory).
+# https://github.com/lycheeverse/lychee
+
+#############################  Display  #############################
+verbose = "debug"
+no_progress = false
+output = "report-broken-links.md"
+
+#############################  Cache  ###############################
+cache = true
+max_cache_age = "2d"
+
+#############################  Runtime  #############################
+threads = 2
+max_redirects = 10
+max_retries = 3
+max_concurrency = 14
+
+#############################  Requests  ############################
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
+timeout = 60
+retry_wait_time = 60
+accept = ["200", "429"]
+insecure = true
+scheme = ["http", "https", "mailto"]
+require_https = false
+method = "get"
+header = []
+base = "https://blog.augustopascutti.com"
+
+#############################  Exclusions  ##########################
+skip_missing = false
+include_verbatim = false
+glob_ignore_case = false
+exclude = ['^(http|https):\/\/(?:www\.)?twitter\.com\/.*', '^(http|https)://(?:www\.)?x\.com/.*', '^http://mtgapi\.com/api/v1/fetch/id', '^https://www\.mysql\.com']
+exclude_path = ["_drafts", "bin", "res", ".github"]
+include = []
+exclude_all_private = false
+exclude_private = false
+exclude_link_local = false
+exclude_loopback = false
+include_mail = true

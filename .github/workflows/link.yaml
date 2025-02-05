@@ -2,9 +2,18 @@ name: Link Health
 
 on:
   repository_dispatch:
-  workflow_dispatch:
   schedule:
     - cron: "00 10 * * 1"
+  workflow_dispatch:
+    inputs:
+      create_issue:
+        description: "If 'true' creates an issue with the broken links report."
+        required: true
+        default: true
+        type: string
+
+env:
+  OPTION_CREATE_ISSUE: ${{ inputs.create_issue || 'true' }}
 
 jobs:
   linkChecker:
@@ -12,19 +21,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Link Checker
+      - name: Broken Links? 🤔
         id: lychee
-        uses: lycheeverse/lychee-action@v1.8.0
+        uses: lycheeverse/lychee-action@v2
         with:
-          fail: false
+          args: --config ./.lychee.toml --no-progress .
+          failIfEmpty: false
           debug: false
           format: markdown
-          output: ./lychee/out.md
+          output: report-broken-links.md
 
-      - name: Create Issue From File
-        if: env.lychee_exit_code != 0
+      - name: Report broken links
+        if: ${{ failure() && env.OPTION_CREATE_ISSUE == 'true' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
-          title: Broken links automated report
-          content-filepath: ./lychee/out.md
+          title: 🤖 Broken Links Report
+          content-filepath: report-broken-links.md
           labels: Bug
