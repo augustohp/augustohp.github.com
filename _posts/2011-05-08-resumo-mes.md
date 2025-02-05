@@ -12,7 +12,7 @@ esqueci de alguma coisa podem me avisar pelos comentários ou pelo
 
 ## Desenvolvimento do PHP
 
--   [Planejando a 5.4](http://wiki.php.net/todo/php54): Começou o
+-   [Planejando a 5.4](https://wiki.php.net/todo/php54): Começou o
     planejamento pro que (idealmente) será a versão 5.4 do PHP. O
     processo todo, apesar de algumas coisas já possuírem patches e
     inclusive estarem no *trunk* ainda são discutíveis, ou seja, não
@@ -34,7 +34,7 @@ esqueci de alguma coisa podem me avisar pelos comentários ou pelo
         Marco Tabini disserta um pouco em cima da conclusão do post do
         Cal Evans (acima) e (minha opinião) acerta em cheio no assunto;
     -   [A roundhouse kick, or the state of
-        PHP](http://till.klampaeckel.de/blog/archives/150-A-roundhouse-kick,-or-the-state-of-PHP.html):
+        PHP](https://till.klampaeckel.de/blog/archives/150-A-roundhouse-kick,-or-the-state-of-PHP.html):
         Um belo resumo para quem não esta acostumado a acompanhar todas
         as disussões existentes. Dá um ótimo background sobre PEAR,
         Drupal, e outros projetos; apesar (obviamente) das opiniões
@@ -56,14 +56,14 @@ esqueci de alguma coisa podem me avisar pelos comentários ou pelo
     bem vinda uma vez que as instâncias insaladas por ele são
     gerenciadas por ele mesmo. Agora fica fácil você exprimentar a
     replicação do MySQL.
--   [Behat](http://behat.org/): É uma ferramenta BDD que te ajuda
+-   [Behat](https://behat.org/): É uma ferramenta BDD que te ajuda
     escrever testes de uma forma muito mais natural do que Testes
     Uniários. Altamente inspirada no Cocumber do Ruby.
 -   [Internet Explorer 10
     (Preview 1)][2]:
     Preview do navegador da Microsoft, seguindo o fluxo de mudanças do
     IE9.
--   [Opera 11](http://www.opera.com): Saiu uma nova versão do
+-   [Opera 11](https://www.opera.com): Saiu uma nova versão do
     navegador que era meu navegador de escolha antes do Chrome. Ainda
     vale a olhada e o uso.
 
@@ -76,10 +76,10 @@ esqueci de alguma coisa podem me avisar pelos comentários ou pelo
     pessoas que não estão acostumadas com a arquitetura de funcionamento
     da PEAR.
 -   [Discussão do Mime-Type do PHP
-    (inglês)](http://cweiske.de/tagebuch/php-mimetype.htm): Nada muito
+    (inglês)](https://cweiske.de/tagebuch/php-mimetype.htm): Nada muito
     sério, porém um post extreamente interessante.
 -   [MAC vs PC
-    (inglês)](http://mashable.com/2011/04/23/mac-vs-pc-infographic/):
+    (inglês)](https://mashable.com/2011/04/23/mac-vs-pc-infographic/):
     Gráfico ressantando as diferenças de gosto de usuários MAC e PC. No
     mínimo interessante.
 
@@ -118,9 +118,9 @@ eles não estão errados. Vide PSN.
 Concluindo? Quer uma dica? Vai brincar com o MySQL novo e o suporte
 nativo a memcached.
 
-[tabini]: http://web.archive.org/web/20121205090627/http://blog.tabini.ca/2011/04/is-php-running-out-of-itches-to-scratch/
-[ms]: http://web.archive.org/web/20230405092001/http://mysqlsandbox.net/news.html
-[1]: http://web.archive.org/web/20211204111256/https://blog.calevans.com/2011/04/07/four-reasons-why-drupal-should-fork-php/
-[2]: http://web.archive.org/web/20121222212147/http://blogs.msdn.com:80/b/ie/archive/2011/04/12/native-html5-first-ie10-platform-preview-available-for-download.aspx
-[3]: http://web.archive.org/web/20121226095652/http://dev.mysql.com:80/tech-resources/articles/whats-new-in-mysql-5.6.html
-[4]: http://web.archive.org/web/20120815012456/http://blog.stuartherbert.com:80/php/2011/04/09/gathering-requirements-for-a-pear-channel-aggregator/
+[tabini]: https://web.archive.org/web/20121205090627/blog.tabini.ca/2011/04/is-php-running-out-of-itches-to-scratch/
+[ms]: https://web.archive.org/web/20230405092001/mysqlsandbox.net/news.html
+[1]: https://web.archive.org/web/20211204111256/blog.calevans.com/2011/04/07/four-reasons-why-drupal-should-fork-php/
+[2]: https://web.archive.org/web/20121222212147/blogs.msdn.com:80/b/ie/archive/2011/04/12/native-html5-first-ie10-platform-preview-available-for-download.aspx
+[3]: https://web.archive.org/web/20121226095652/dev.mysql.com:80/tech-resources/articles/whats-new-in-mysql-5.6.html
+[4]: https://web.archive.org/web/20120815012456/blog.stuartherbert.com:80/php/2011/04/09/gathering-requirements-for-a-pear-channel-aggregator/

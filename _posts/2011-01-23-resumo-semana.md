@@ -32,24 +32,24 @@ frameworks do mercado, tentei ser o mais imparcial possível. As
 apresentações seguem abaixo:
 
 <div style="width:425px" id="__ss_6619692">
-<strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/rdohms/trilhando-o-caminho-php-20-campus-party-2011" title="Trilhando o Caminho PHP 2.0 - Campus Party 2011">Trilhando
+<strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/rdohms/trilhando-o-caminho-php-20-campus-party-2011" title="Trilhando o Caminho PHP 2.0 - Campus Party 2011">Trilhando
 o Caminho PHP 2.0 - Campus Party
-2011</a></strong><object id="__sse6619692" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=trilhando-2-0-cparty-110118193031-phpapp02&rel=0&stripped_title=trilhando-o-caminho-php-20-campus-party-2011&userName=rdohms" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse6619692" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=trilhando-2-0-cparty-110118193031-phpapp02&rel=0&stripped_title=trilhando-o-caminho-php-20-campus-party-2011&userName=rdohms" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object>
+2011</a></strong><object id="__sse6619692" width="425" height="355"><param name="movie" value="https://static.slidesharecdn.com/swf/ssplayer2.swf?doc=trilhando-2-0-cparty-110118193031-phpapp02&rel=0&stripped_title=trilhando-o-caminho-php-20-campus-party-2011&userName=rdohms" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse6619692" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=trilhando-2-0-cparty-110118193031-phpapp02&rel=0&stripped_title=trilhando-o-caminho-php-20-campus-party-2011&userName=rdohms" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object>
 
 <div style="padding:5px 0 12px">
 Veja mais apresentações do
-<a href="http://www.slideshare.net/rdohms">Rafael Dohms</a>.
+<a href="https://www.slideshare.net/rdohms">Rafael Dohms</a>.
 
 </div>
 </div>
 <div style="width:425px" id="__ss_6643165">
-<strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/augustopascutti/campus-party-frameworks-php" title="Campus Party - Frameworks PHP">Campus
+<strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/augustopascutti/campus-party-frameworks-php" title="Campus Party - Frameworks PHP">Campus
 Party - Frameworks
-PHP</a></strong><object id="__sse6643165" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=frameworks-110120123318-phpapp01&rel=0&stripped_title=campus-party-frameworks-php&userName=augustopascutti" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse6643165" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=frameworks-110120123318-phpapp01&rel=0&stripped_title=campus-party-frameworks-php&userName=augustopascutti" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object>
+PHP</a></strong><object id="__sse6643165" width="425" height="355"><param name="movie" value="https://static.slidesharecdn.com/swf/ssplayer2.swf?doc=frameworks-110120123318-phpapp01&rel=0&stripped_title=campus-party-frameworks-php&userName=augustopascutti" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse6643165" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=frameworks-110120123318-phpapp01&rel=0&stripped_title=campus-party-frameworks-php&userName=augustopascutti" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object>
 
 <div style="padding:5px 0 12px">
 Veja mais apresentações
-<a href="http://www.slideshare.net/augustopascutti">minhas </a>.
+<a href="https://www.slideshare.net/augustopascutti">minhas </a>.
 
 </div>
 </div>
@@ -60,7 +60,7 @@ Veja mais apresentações
     version, tanto pra árvore 5.2 quanto pra 5.3. A correção em questão
     é sobre uma brecha de segurança na conversão de *strings* em
     *doubles*. [Mais
-    informação](http://www.php.net/archive/2011.php#id2011-01-06-1)
+    informação](https://www.php.net/archive/2011.php#id2011-01-06-1)
 -   **Perfomance Hash**: Um pessoal fez um profilling do código atual do
     PHP e concluiu que era possível melhorar as funções de hash
     (MUUUUITA coisa depende delas). Fizeram um patch, enviaram e agora
@@ -72,18 +72,18 @@ Veja mais apresentações
     (zero) e sim *null* após a atualização para o PHP 5.3.1. Ninguém
     mais nem menos que o *Rasmus Lerdorf* respondeu o bug pacientemente,
     mas a conversa vale a pena ser lida. [O santo
-    bug](http://bugs.php.net/bug.php?id=50696)
+    bug](https://bugs.php.net/bug.php?id=50696)
 
 ## Ferramentas
 
--   [**Phake**](http://digitalsandwich.com/archives/84-introducing-phake-mocking-framework.html):
+-   [**Phake**](https://digitalsandwich.com/archives/84-introducing-phake-mocking-framework.html):
     Uma nova ferramenta para mocking, baseada no Mockito do Java. Sua
     sintaxe é mais intuitiva do que a ferramenta de Mock nativa do
     PHPunit. Se você gostar dela, deveria dar uma olhada também no
     [Mockery do Padraic](https://github.com/padraic/mockery).
--   [**Drupal 7**](http://drupal.org/drupal-7.0): Saiu a nova major
+-   [**Drupal 7**](https://drupal.org/drupal-7.0): Saiu a nova major
     version do Drupal depois de quase 3 anos de desenvolvimento. O
     Drupal dispensa apresentações, mas se você não conhece;
     definitivamente deveria dar uma olhada.
 
-[1]: http://web.archive.org/web/20121106162819/http://www.rafaeldohms.com.br:80/
+[1]: https://web.archive.org/web/20121106162819/www.rafaeldohms.com.br:80/

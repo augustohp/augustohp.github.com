@@ -4,9 +4,9 @@ title: NodeJS Event Emitters
 category: NodeJs
 ---
 
-Há algum tempo venho brincando com [NodeJS](http://nodejs.org/). A
+Há algum tempo venho brincando com [NodeJS](https://nodejs.org/). A
 brincadeira começou com uma pesquisa sobre gerenciadores de pacote a um
-bom tempo atrás até que cheguei ao [NPM](http://npmjs.org/) que possui
+bom tempo atrás até que cheguei ao [NPM](https://npmjs.org/) que possui
 uma arquitetura relativamente boa e extremamente interessante.
 
 Mas não estou aqui pra falar do NPM, e sim do NodeJS. O principal fator
@@ -31,7 +31,7 @@ já fez e que poderiam ter um ganho significativo com essa abordagem.
 ## Show me the code!
 
 Pela documentação do NodeJS o
-[EventEmitter](http://nodejs.org/docs/v0.4.2/api/events.html) pode ser
+[EventEmitter](https://nodejs.org/docs/v0.4.2/api/events.html) pode ser
 utilizado da seguinte forma:
 
 ```javascript

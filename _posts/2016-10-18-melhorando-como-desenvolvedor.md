@@ -36,13 +36,13 @@ praticamente tudo que usa no ZSH é possível no BASH, sem todos os problemas?
 Nada me ensinou, e me ensina, tanto quando o [Unix][6]. Então leia. Se permita
 ser mais preguiçoso e **pare de reinventar a roda**.
 
-[1]: http://bit.ly/2ecTfdz "Wikipedia: Isaac Azimov. Não conhece? Leia 'O fim da eternidade'"
-[2]: http://bit.ly/porque-vim "Palestra: Por que VIM? Uma palestra sobre limitações, não um editor."
+[1]: https://bit.ly/2ecTfdz "Wikipedia: Isaac Azimov. Não conhece? Leia 'O fim da eternidade'"
+[2]: https://bit.ly/porque-vim "Palestra: Por que VIM? Uma palestra sobre limitações, não um editor."
 [3]: https://www.imdb.com/title/tt1772925 "Documentário: Jiro Dreams of Sushi."
-[4]: http://bit.ly/2dnHDjk "A filosofia Unix é sobre pequenos programas, que juntos fazem muito. Não o tamanho deles."
-[5]: http://bit.ly/2ebFhaA "Agregação de notícias: Hacker News. 3 horas te ajudam a escapar dos hype-links. Acredite em mim, você não quer eles."
-[6]: http://bit.ly/2dnHDjk "Será que alguém lê isso?"
-[7]: http://bit.ly/2egr0Yx "Post: Unix as your IDE. O post é bem básico, mas é um excelente começo."
+[4]: https://bit.ly/2dnHDjk "A filosofia Unix é sobre pequenos programas, que juntos fazem muito. Não o tamanho deles."
+[5]: https://bit.ly/2ebFhaA "Agregação de notícias: Hacker News. 3 horas te ajudam a escapar dos hype-links. Acredite em mim, você não quer eles."
+[6]: https://bit.ly/2dnHDjk "Será que alguém lê isso?"
+[7]: https://bit.ly/2egr0Yx "Post: Unix as your IDE. O post é bem básico, mas é um excelente começo."
 
 <!--
 vim: spell spelllang=pt

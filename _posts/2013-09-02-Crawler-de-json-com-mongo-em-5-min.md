@@ -11,21 +11,21 @@ Há muito tempo não via uma API que me desse vontade de sugar, vou mostrar o qu
 
 Já adianto que eu não fiz nenhum milagre, aqui está tudo o que precisa pra esse crawler:
 
-* [MongoDB](http://www.mongodb.org/)
-* [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)
-* [cURL](http://curl.haxx.se/)
+* [MongoDB](https://www.mongodb.org/)
+* [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)
+* [cURL](https://curl.haxx.se/)
 
 ## O Crawler
 
-A [api](http://mtgapi.com/) em questão tem informação de [quase](https://news.ycombinator.com/item?id=6300576) todos os cards do [Magic: The Gathering](http://www.wizards.com/Magic) em formato [JSON](http://json.org) (por isso o MongoBD).
+A [api](https://mtgapi.com/) em questão tem informação de [quase](https://news.ycombinator.com/item?id=6300576) todos os cards do [Magic: The Gathering](http://www.wizards.com/Magic) em formato [JSON](http://json.org) (por isso o MongoBD).
 
-Um dos *endpoints* é `http://mtgapi.com/api/v1/fetch/id/{id}` onde o `{id}` pra mim foi um auto incremento até o infinito. 
+Um dos *endpoints* é `https://mtgapi.com/api/v1/fetch/id/{id}` onde o `{id}` pra mim foi um auto incremento até o infinito. 
 
 O crawler que usei consiste de uma linha, abaixo vai uma versão extendida (mais fácil de ler):
 
 <pre class="language-bash">
 #!/bin/bash
-URL="http://mtgapi.com/api/v1/fetch/id/"
+URL="https://mtgapi.com/api/v1/fetch/id/"
 for ID in {1..999}; do
     result=$(curl --get --silent -H "User-Agent: BadassBash 0.0.1 (Yep, another crawler)" "${URL}/${ID}" 2> crawler.err)
     echo $result | mongoimport localhost -d magic -c cards

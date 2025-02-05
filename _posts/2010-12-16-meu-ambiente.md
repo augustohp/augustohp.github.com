@@ -95,7 +95,7 @@ criarem os respectivos posts, colocarei os links aqui):
 [^1]: O **Alfred** provavelmente mude de nome, conforme [anunciado][4] em 11 de
     janeiro de 2011.
 
-[1]: http://web.archive.org/web/20130114230111/http://duodra.co/post/seu-ambiente-de-trabalho-em-7-itens/
-[2]: http://web.archive.org/web/20111219153432/http://blog.adlermedrado.com.br:80/ 
-[3]: http://web.archive.org/web/20120321031000/http://www.jairhenrique.com:80/2010/12/meu-ambiente-de-trabalho/
-[4]: http://web.archive.org/web/20110114222043/http://www.hudson-labs.org:80/content/hudsons-future?
+[1]: https://web.archive.org/web/20130114230111/duodra.co/post/seu-ambiente-de-trabalho-em-7-itens/
+[2]: https://web.archive.org/web/20111219153432/blog.adlermedrado.com.br:80/ 
+[3]: https://web.archive.org/web/20120321031000/www.jairhenrique.com:80/2010/12/meu-ambiente-de-trabalho/
+[4]: https://web.archive.org/web/20110114222043/www.hudson-labs.org:80/content/hudsons-future?

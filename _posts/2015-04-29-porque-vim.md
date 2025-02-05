@@ -66,24 +66,24 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 
 [slides]: //www.slideshare.net/augustopascutti/porque-vim
 [grep]: https://en.wikipedia.org/wiki/Grep
-[5]: http://web.archive.org/web/20170718104420/http://www.linuxcommand.org:80/learning_the_shell.php
-[6]: http://www.oreilly.com/openbook/debian/book/ch13_01.html
-[7]: http://www.amazon.com/Power-Tools-Third-Shelley-Powers/dp/0596003307
-[vim]: http://www.vim.org/
+[5]: https://web.archive.org/web/20170718104420/www.linuxcommand.org:80/learning_the_shell.php
+[6]: https://www.oreilly.com/openbook/debian/book/ch13_01.html
+[7]: https://www.amazon.com/Power-Tools-Third-Shelley-Powers/dp/0596003307
+[vim]: https://www.vim.org/
 [emacs]: https://www.gnu.org/software/emacs/
-[subl]: http://www.sublimetext.com/
+[subl]: https://www.sublimetext.com/
 [osx]: https://www.apple.com/osx/
-[1]: http://blog.augustopascutti.com/desenvolvimento/2013/11/06/Meu_ambiente_de_trabalho.html
-[2]: http://www.slideshare.net/augustopascutti/logs-36298518
+[1]: https://blog.augustopascutti.com/desenvolvimento/2013/11/06/Meu_ambiente_de_trabalho.html
+[2]: https://www.slideshare.net/augustopascutti/logs-36298518
 [linux]: https://kernel.org/
-[shared nothing]: http://en.wikipedia.org/wiki/Shared_nothing_architecture
+[shared nothing]: https://en.wikipedia.org/wiki/Shared_nothing_architecture
 [PHP]: https://php.net/
 [mysql]: https://www.mysql.com/
 [lamp]: https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29
-[wamp]: http://www.wampserver.com/en/
+[wamp]: https://www.wampserver.com/en/
 [httpd]: https://httpd.apache.org/
-[httpd-security]: http://httpd.apache.org/docs/current/howto/auth.html
-[httpd-proxy]: http://httpd.apache.org/docs/current/mod/mod_proxy.html
+[httpd-security]: https://httpd.apache.org/docs/current/howto/auth.html
+[httpd-proxy]: https://httpd.apache.org/docs/current/mod/mod_proxy.html
 [wordpress]: https://wordpress.com/
 [wikipedia]: https://wikipedia.org/
 [crawler]: https://blog.augustopascutti.com/hacks/unix/2013/09/02/Crawler-de-json-com-mongo-em-5-min.html

@@ -9,7 +9,7 @@ Você trabalha com desenvolvimento, seja em equipe ou sozinho, você
 precisa de um sistema de controle de versões. É simples assim. Você
 precisa e ponto. Fazendo uma analogia a religiões, toda religião que se
 preze deveria ter um Deus como o [Monstro Spaguetti
-Voador](http://en.wikipedia.org/wiki/Flying_Spaghetti_Monster) assim
+Voador](https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster) assim
 como todo desenvolvedor que se preze deveria se apegar a um software de
 controle de versões.
 
@@ -91,21 +91,21 @@ maldita e esquecida revisão.
 
 ## Quais os sistemas de controle de versão existentes?
 
-Existem vários. Mesmo. O [PHP](http://php.net) utiliza atualmente o
-[SVN](http://subversion.apache.org/), mas antes dele utilizava o
-[CVS](http://www.cvshome.org/eng/). Agora, o *buzz* do momento (do
+Existem vários. Mesmo. O [PHP](https://php.net) utiliza atualmente o
+[SVN](https://subversion.apache.org/), mas antes dele utilizava o
+[CVS](https://www.cvshome.org/eng/). Agora, o *buzz* do momento (do
 passado, eu diria. Ele já está aí a um bom tempo) é o
-[Git](http://git-scm.com/). Eu não pretendo detalhar cada um, até mesmo
+[Git](https://git-scm.com/). Eu não pretendo detalhar cada um, até mesmo
 porque não cheguei a utilizar todos, mas pelo menos dois que tenho uma
 experiência razoável e são software-livre.
 
 Existem outros, como:
 
 -   [Mercurial](https://www.mercurial-scm.org/)
--   [Bazaar](http://en.wikipedia.org/wiki/Bazaar_(software))
--   [Monotone](http://www.monotone.ca/)
--   [Perforce](http://www.perforce.com/)
--   [SourceSafe](http://msdn.microsoft.com/en-us/library/3h0544kx(v=vs.80).aspx)
+-   [Bazaar](https://en.wikipedia.org/wiki/Bazaar_(software))
+-   [Monotone](https://www.monotone.ca/)
+-   [Perforce](https://www.perforce.com/)
+-   [SourceSafe](https://msdn.microsoft.com/en-us/library/3h0544kx(v=vs.80).aspx)
 
 ### Subversion (SVN)
 
@@ -140,7 +140,7 @@ O Git é o menino prodígio atual do grupo. Ele é na minha opinião (e na
 de muitos) o melhor existente. Ele foi criado com um propósito simples:
 ser utilizado no desenvolvimento do kernel do Linux. Em 2005 um ato
 infeliz, interpretado de maneira infeliz e colocado a público por um
-idiota fez com que a licença do [BitKeeper](http://www.bitkeeper.com/)
+idiota fez com que a licença do [BitKeeper](https://www.bitkeeper.com/)
 que o kernel utilizava de forma gratuita fosse revogada e como nenhum
 sistema de controle de versões existente (livre e comercial) atendeu as
 demandas do senhor Linus, ele resolveu desenvolver um. A título de
@@ -193,7 +193,7 @@ seja feliz também.
 ## Eu já conheço e já uso controle de versões
 
 Ótimo para você. Você conhece
-[branching](http://en.wikipedia.org/wiki/Branching_(software)?) Não?! Dê
+[branching](https://en.wikipedia.org/wiki/Branching_(software)?) Não?! Dê
 uma olhada e você será mais feliz ainda.
 
 Dica de amigo: se você for desenvolver utilizando branching, o faça

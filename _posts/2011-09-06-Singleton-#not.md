@@ -8,7 +8,7 @@ published: true
 
 Se você tiver preguiça de ler, leia só isso: Evite usar o Singleon. Ele
 tem seu uso, como está descrito no livro [Design
-Patterns](http://www.amazon.com/o/asin/0201633612), mas pra variar a
+Patterns](https://www.amazon.com/o/asin/0201633612), mas pra variar a
 galera simplesmente ignorou o que tá escrito lá e saiu usando isso de
 maneira leviana.
 
@@ -89,7 +89,7 @@ O uso do Singleton aí em cima é de um exemplo real. Do Zend Framework.
 Ele está certo? Não.
 
 Porque não!? Eu não vou entrar no mérito de discutir o que é o
-[FrontController](http://java.sun.com/blueprints/patterns/FrontController.html),
+[FrontController](https://java.sun.com/blueprints/patterns/FrontController.html),
 mas eu explico pra vocês.
 
 Front Controller é um Design Pattern que resolve o problema de ser o
@@ -213,5 +213,5 @@ muito mais experientes e que provavelmente sabem o que estão falando.
 -   [Singleton considerado estúpido][2]
 -   [Porque evitar o uso do Singleton][1]
 
-[1]: https://web.archive.org/web/20081218140813/http://www.as3dp.com/2008/11/26/we-don%E2%80%99t-need-no-stinkin%E2%80%99-singletons-why-to-avoid-the-singleton-pattern-in-actionscript-30-programming/
+[1]: https://web.archive.org/web/20081218140813/www.as3dp.com/2008/11/26/we-don%E2%80%99t-need-no-stinkin%E2%80%99-singletons-why-to-avoid-the-singleton-pattern-in-actionscript-30-programming/
 [2]: https://sites.google.com/site/steveyegge2/singleton-considered-stupid

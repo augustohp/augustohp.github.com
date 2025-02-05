@@ -5,17 +5,17 @@ Pelo menos estão decentemente versionados.
 
 ## Como ele funciona?
 
-* [GitHub Pages](http://pages.github.com) para transformar este repositório num site.
-* [SASS](http://sass-lang.com/) pra tentar manter o CSS são.
-* [Git](http://git-scm.com) para versionar os textos.
-* [Markdown](http://daringfireball.net/projects/markdown/) para manter os textos legíveis.
-* [Disqs](http://disqus.com/) para os comentários.
+* [GitHub Pages](https://pages.github.com) para transformar este repositório num site.
+* [SASS](https://sass-lang.com/) pra tentar manter o CSS são.
+* [Git](https://git-scm.com) para versionar os textos.
+* [Markdown](https://daringfireball.net/projects/markdown/) para manter os textos legíveis.
+* [Disqs](https://disqus.com/) para os comentários.
 
-Tenho usado [Git](http://git-scm.com) por tempo o suficiente pra querer 
+Tenho usado [Git](https://git-scm.com) por tempo o suficiente pra querer 
 tudo versionado nele, porquê não o blog?
 
 Escrever (e ler HTML) não é lá muito confortável, estive acostumado a escrever
-em [Markdown](http://daringfireball.net/projects/markdown/) durante tanto tempo
+em [Markdown](https://daringfireball.net/projects/markdown/) durante tanto tempo
 que o faço sem nem perceber.
 
 Estou bastante convencido do workflow que tenho pro *blog*, apesar de não usar

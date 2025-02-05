@@ -216,15 +216,15 @@ PPS: Preciso agradecer imensamente a paciência e amizade dos amigos [Nelson][],
 e discutindo esse post (e provavelmente mais alguns que virão). Se você curtiu
 esse post, por favor agradeça a elas por mim também! :)
 
-[3]: http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
-[ddd]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+[3]: https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+[ddd]: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
 [explain-variables]: https://sourcemaking.com/refactoring/introduce-explaining-variable
 [singleton]: https://sourcemaking.com/design_patterns/singleton
-[c2]: http://c2.com/cgi/wiki?WelcomeVisitors
-[c2-acessors]: http://c2.com/cgi/wiki?AccessorsAreEvil
+[c2]: https://c2.com/cgi/wiki?WelcomeVisitors
+[c2-acessors]: https://c2.com/cgi/wiki?AccessorsAreEvil
 [pola]: https://en.wikipedia.org/wiki/Principle_of_least_astonishment
 [code review]: https://en.wikipedia.org/wiki/Code_review
 [joao]: https://github.com/netojoaobatista/
-[nelson]: http://twitter.com/nelson_senna
+[nelson]: https://twitter.com/nelson_senna
 [cobucci]: https://github.com/lcobucci
 [ivo]: https://twitter.com/ivonascimento

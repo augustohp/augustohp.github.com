@@ -9,11 +9,11 @@ published: true
 Aqui segue o resumo dessa semana (9 a 14 de janeiro) no mundo PHP. Mais
 uma vez, se deixei escapar alguma coisa que você achou interessante,
 grite comigo pelo twitter
-[@augustohp](http://www.twitter.com/augustohp).
+[@augustohp](https://www.twitter.com/augustohp).
 
 ## Desenvolvimento do PHP
 
--   [**Traits**](http://wiki.php.net/rfc/horizontalreuse): Se você ainda
+-   [**Traits**](https://wiki.php.net/rfc/horizontalreuse): Se você ainda
     não sabe, vai ficar sabendo: a próxima versão do PHP é a versão 5.4
     (essa não é uma notícia nova). A grande novidade nesta versão é a
     adição dos Traits e essa semana já começou com uma discussão sobre o
@@ -30,13 +30,13 @@ grite comigo pelo twitter
 
 -   "**Typo3/Flow3 + Dotrine**": Ambos passarão a ter integração com o
     Doctrine 2 conforme o
-    [tweet](http://twitter.com/t3rob/status/23013456672202752#) do líder
+    [tweet](https://twitter.com/t3rob/status/23013456672202752#) do líder
     de desenvolvimento de ambos. (Valeu @guilhermeblanco pela dica)
 -   "**Propel + Doctrine**": Essa é antiga, mas acompanhando a notícia
     de cima, o Propel na próxima *major version* passará a utilizar a
     camada de abstração de banco do Doctrine 2 (DBAL) e partes do ORM do
     Doctrine 2. [Post de
-    anúncio](https://web.archive.org/web/20130330062952/http://propel.posterous.com/propel2-will-be-an-activerecord-implementatio)
+    anúncio](https://web.archive.org/web/20130330062952/propel.posterous.com/propel2-will-be-an-activerecord-implementatio)
 
 ## Posts
 
@@ -47,7 +47,7 @@ grite comigo pelo twitter
     usar a FQL (consultas SQL dos dados do Facebook) usando o SDK em
     PHP. (em inglês)
 -   [**Database version
-    control**](https://web.archive.org/web/20120416014709/http://techportal.ibuildings.com/2011/01/11/database-version-control/):
+    control**](https://web.archive.org/web/20120416014709/techportal.ibuildings.com/2011/01/11/database-version-control/):
     Este artigo é bem legal. Ele cobre algumas alternativas sobre como
     você pode versionar seu banco de dados. (em inglês)
 -   [**Facebook Hacker
@@ -56,14 +56,14 @@ grite comigo pelo twitter
     Parabéns aos qualificados. Quem não participou, pode pegar os 3
     problemas e tentar resolver. (em inglês)
 -   [**Testando
-    Traits**](https://web.archive.org/web/20110119152057/https://sebastian-bergmann.de/archives/906-Testing-Traits.html):
+    Traits**](https://web.archive.org/web/20110119152057/sebastian-bergmann.de/archives/906-Testing-Traits.html):
     O Sebastian Bergman, criador do PHPUnit, postou essa semana como
     você poderá fazer testes unitários na funcionalidade que será
     adicionada no PHP 5.4. A funcionalidade já está disponível no
     *master* branch do PHPUnit e será lançado na versão 3.6 do PHPUnit.
     (em inglês)
 -   [**Futuro do
-    Hudson**](https://web.archive.org/web/20110112133740/http://hudson-labs.org/content/hudsons-future):
+    Hudson**](https://web.archive.org/web/20110112133740/hudson-labs.org/content/hudsons-future):
     Provavelmente ele mude de nome conforme proposta pelos líderes do
     projeto num post essa semana. Essa não é relacionada diretamente ao
     PHP, mas bateu na tabela e aqui está. (em inglês)

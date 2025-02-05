@@ -8,7 +8,7 @@ category: PHP,Resumos
 Esse é o primeiro post de uma série que pretendo fazer. A proposta é
 simples: resumir a semana do PHP no mundo neste post. Se saiu algo de
 interessante que não está aqui, por favor me evise no
-[@augustohp](http://twitter.com/augustohp) ou deixe um comentário e eu
+[@augustohp](https://twitter.com/augustohp) ou deixe um comentário e eu
 atualizo o post.
 
 ## Desenvolvimento do PHP
@@ -17,7 +17,7 @@ atualizo o post.
     version, tanto pra árvore 5.2 quanto pra 5.3. A correção em questão
     é sobre uma brecha de segurança na conversão de *strings* em
     *doubles*. [Mais
-    informação](http://www.php.net/archive/2011.php#id2011-01-06-1)
+    informação](https://www.php.net/archive/2011.php#id2011-01-06-1)
 -   **Perfomance Hash**: Um pessoal fez um profilling do código atual do
     PHP e concluiu que era possível melhorar as funções de hash
     (MUUUUITA coisa depende delas). Fizeram um patch, enviaram e agora
@@ -29,13 +29,13 @@ atualizo o post.
     (zero) e sim *null* após a atualização para o PHP 5.3.1. Ninguém
     mais nem menos que o *Rasmus Lerdorf* respondeu o bug pacientemente,
     mas a conversa vale a pena ser lida. [O santo
-    bug](http://bugs.php.net/bug.php?id=50696)
--   [**Phake**](http://digitalsandwich.com/archives/84-introducing-phake-mocking-framework.html):
+    bug](https://bugs.php.net/bug.php?id=50696)
+-   [**Phake**](https://digitalsandwich.com/archives/84-introducing-phake-mocking-framework.html):
     Uma nova ferramenta para mocking, baseada no Mockito do Java. Sua
     sintaxe é mais intuitiva do que a ferramenta de Mock nativa do
     PHPunit. Se você gostar dela, deveria dar uma olhada também no
     [Mockery do Padraic](https://github.com/padraic/mockery).
--   [**Drupal 7**](http://drupal.org/drupal-7.0): Saiu a nova major
+-   [**Drupal 7**](https://drupal.org/drupal-7.0): Saiu a nova major
     version do Drupal depois de quase 3 anos de desenvolvimento. O
     Drupal dispensa apresentações, mas se você não conhece;
     definitivamente deveria dar uma olhada.
@@ -55,4 +55,4 @@ atualizo o post.
     Twitter e está começando com Orientação a Objetos, essa série pode
     te ajudar um pouco.
 
-[1]: http://web.archive.org/web/20110304231046/http://blogs.sitepoint.com:80/2011/01/05/create-your-own-twitter-widget-1/
+[1]: https://web.archive.org/web/20110304231046/blogs.sitepoint.com:80/2011/01/05/create-your-own-twitter-widget-1/

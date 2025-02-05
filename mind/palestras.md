@@ -22,7 +22,7 @@ Ao invés de só apresentar conceitos ou entrar em profundidade neles, que tal
 testar uma aplicação de 
 
 * Links
-  * [Repositório v1 (SfCon)](http://git.io/tdd): Os commits seguem as iterações completas de um ciclo de TDD.
+  * [Repositório v1 (SfCon)](https://git.io/tdd): Os commits seguem as iterações completas de um ciclo de TDD.
   * [Gravata][]: Como TDD influencia o design. Feito e [apresentado][gravata-video] em par com [Nelson][].
   * [7 Masters: Testes][7masters]: Testes automatizados, em 7 minutos.
 
@@ -43,9 +43,9 @@ This is not a talk about an editor, it is to inspire and show you can much good
 (and free) stuff you are missing for not using the terminal you probably
 complain to use when needed.
 
-*[Slides already presented](http://www.slideshare.net/augustopascutti/porque-vim).
+*[Slides already presented](https://www.slideshare.net/augustopascutti/porque-vim).
 *[Past evaluations from people who saw it](https://joind.in/event/php-experience-2015/por-que-vim-por-que-decidi-trocar-uma-ide-por-um-editor-no-terminal).
-*[A post explaining the talk](http://blog.augustopascutti.com/desenvolvimento/2015/04/30/porque-vim.html).
+*[A post explaining the talk](https://blog.augustopascutti.com/desenvolvimento/2015/04/30/porque-vim.html).
 *[Video](https://www.youtube.com/watch?v=Z_XJys9qyGk)
 
 # Guia do mochileiro para escalabilidade
@@ -56,7 +56,7 @@ web, como usar essa arquitetura a seu favor e quais são as práticas mais comun
 será o conteúdo dessa palestra. Nada de teoria, você leva pra casa um conjunto
 de VMs pra experimentar e aprender o que foi apresentado.
 
-*[Slides](http://www.slideshare.net/augustopascutti/mochileiro-escalabilidade).
+*[Slides](https://www.slideshare.net/augustopascutti/mochileiro-escalabilidade).
 *[Open repository with multi Vagrant VMs](https://github.com/augustohp/palestra-escalabilidade).
 *People comments on previous talks:
   *[PHPEste 2015](https://joind.in/event/phpeste/guia-do-mochileiro-para-escalabilidade).
@@ -69,7 +69,7 @@ Porque e quando DSLs são úteis e como introduzí-las no seu dia a dia.
 
 * [Video](https://www.youtube.com/watch?v=LzwtXNyg9vE)
 * [Post](https://gist.github.com/augustohp/5a271ec30335f2aec252)
-* [Slides](http://www.slideshare.net/augustopascutti/melhorando-sua-api-com-dsls)
+* [Slides](https://www.slideshare.net/augustopascutti/melhorando-sua-api-com-dsls)
 * [Avaliações](https://joind.in/event/php-experience-2016/melhorando-a-comunicao-da-api-atravs-de-dsl)
 
 # Revisitando a Orientação a Objetos
@@ -93,9 +93,9 @@ projetos Open Source como CakePHP, Zend Framework e Habari. É evangelista PHP e
 de boas práticas, Zend Certified Engineer para PHP 5, fundador/coordenador do
 PHPSP e host do PHPSPCast.
 
-*[Slides de palestras já ministradas](http://www.slideshare.net/augustopascutti)
+*[Slides de palestras já ministradas](https://www.slideshare.net/augustopascutti)
 *[Avaliações de pessoas que viram a palestra](https://joind.in/user/view/943)
-*[Perfis Sociais](http://about.me/augustohp): Meus perfis em diversas redes sociais
-*[Perfil do GitHub](http://github.com/augustohp): Meus códigos Open Source
-*[Blog Pessoal](http://augustopascutti.com): Quando tem mais texto que código
+*[Perfis Sociais](https://about.me/augustohp): Meus perfis em diversas redes sociais
+*[Perfil do GitHub](https://github.com/augustohp): Meus códigos Open Source
+*[Blog Pessoal](https://augustopascutti.com): Quando tem mais texto que código
 *[PHPSP](https://www.phpsp.org.br): Grupo de desenvolvedores PHP do Estado de São Paulo

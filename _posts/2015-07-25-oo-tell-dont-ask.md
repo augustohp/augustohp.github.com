@@ -300,24 +300,24 @@ Eu não falei quase nada sobre o [TDA][], então vá ler mais a respeito:
 PS: Meu obrigado pro [João][joao], [Nelson][] e [Cobucci][] pelo review a mais um
 post. Eles são uns 👼 !
 
-[1]: http://blog.augustopascutti.com/orientação%20a%20objetos/2015/06/25/oo-setters-getters.html
-[2]: http://media.pragprog.com/articles/jan_03_enbug.pdf
-[tda]: http://web.archive.org/web/20121227021359/http://pragprog.com:80/articles/tell-dont-ask
-[4]: http://martinfowler.com/bliki/TellDontAsk.html
-[5]: http://c2.com/cgi/wiki?TellDontAsk
+[1]: https://blog.augustopascutti.com/orientação%20a%20objetos/2015/06/25/oo-setters-getters.html
+[2]: https://media.pragprog.com/articles/jan_03_enbug.pdf
+[tda]: https://web.archive.org/web/20121227021359/pragprog.com:80/articles/tell-dont-ask
+[4]: https://martinfowler.com/bliki/TellDontAsk.html
+[5]: https://c2.com/cgi/wiki?TellDontAsk
 [6]: https://robots.thoughtbot.com/tell-dont-ask
 [anemic-models]: https://en.wikipedia.org/wiki/Anemic_domain_model
-[clean]: http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
-[ddd]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+[clean]: https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+[ddd]: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
 [srp]: https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view?pli=1 "Uncle Bob: Single Responsability Principle"
 [ar]: https://en.wikipedia.org/wiki/Active_record_pattern
 [pp]: https://pragprog.com/about
-[c2]: http://c2.com/cgi/wiki?WelcomeVisitors
-[fowler]: http://martinfowler.com
+[c2]: https://c2.com/cgi/wiki?WelcomeVisitors
+[fowler]: https://martinfowler.com
 [joao]: https://github.com/netojoaobatista/
-[nelson]: http://twitter.com/nelson_senna
+[nelson]: https://twitter.com/nelson_senna
 [cobucci]: https://github.com/lcobucci
 [thoughtbot]: https://thoughtbot.com/
-[reflection]: http://php.net/ReflectionClass
+[reflection]: https://php.net/ReflectionClass
 [inflection]: https://en.wikipedia.org/wiki/Inflection
 [self]: https://twitter.com/augustohp/status/626032867798351872

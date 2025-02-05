@@ -36,11 +36,11 @@ Buscar informações funciona. Sem conexão com internet. Essas duas orações a
 
 ## Um anel para todos encontrar
 
-Navegadores. Pra mim é uma questão de se decepcionar o suficiente e trocar. Um loop infinito no qual a iteração atual está com o ~~[**firefox**](http://getfirefox.com)~~ [Google Chrome](http://google.com/crome).
+Navegadores. Pra mim é uma questão de se decepcionar o suficiente e trocar. Um loop infinito no qual a iteração atual está com o ~~[**firefox**](https://getfirefox.com)~~ [Google Chrome](http://google.com/crome).
 
-Abrir mão de todas minhas informações pessoais pro Google em troca do genrenciamento de usuários do [Chrome](http://google.com/chrome) é uma mão na roda. Eu só evito dar uma olhada no tráfego de rede da minha máquina, é assustador.
+Abrir mão de todas minhas informações pessoais pro Google em troca do genrenciamento de usuários do [Chrome](https://google.com/chrome) é uma mão na roda. Eu só evito dar uma olhada no tráfego de rede da minha máquina, é assustador.
 
-Uso também o [vimperator](http://vimperator.org) mais por causa dos motions. Usar um teclado pode parecer coisa de *hipster*, mas é bem mais produtivo e confortável.
+Uso também o [vimperator](https://vimperator.org) mais por causa dos motions. Usar um teclado pode parecer coisa de *hipster*, mas é bem mais produtivo e confortável.
 
 ## Minha montanha da perdição
 
@@ -72,15 +72,15 @@ Comecei a usar ele assim que saiu o Textmate 2, e foi uma grata surpresa.
 
 ### Vim
 
-Tirando toda idéia [poser](http://www.wikihow.com/Tell-if-You-Are-a-Metal-Poser) de dizer que uso [vim][], diria que ele é um vício bem vindo. Aprender é uma tarefa constante. Com o [vim][] aprendo muito mais do que eu gostaria, mas todos extremamente gratificantes!
+Tirando toda idéia [poser](https://www.wikihow.com/Tell-if-You-Are-a-Metal-Poser) de dizer que uso [vim][], diria que ele é um vício bem vindo. Aprender é uma tarefa constante. Com o [vim][] aprendo muito mais do que eu gostaria, mas todos extremamente gratificantes!
 
-- Os [atalhos de movimentação](http://vimdoc.sourceforge.net/htmldoc/usr_03.html) são **um absurdo de práticos**.
+- Os [atalhos de movimentação](https://vimdoc.sourceforge.net/htmldoc/usr_03.html) são **um absurdo de práticos**.
 - Disponível em qualquer \*nix.
 - Ele **realmente** sai do seu caminho.
-- Os [diferentes](http://vimdoc.sourceforge.net/htmldoc/intro.html#Normal) [modos](http://vimdoc.sourceforge.net/htmldoc/insert.html#Insert) são [realmente](http://vimdoc.sourceforge.net/htmldoc/cmdline.html#Command-line) uma [ótima idéia](http://vimdoc.sourceforge.net/htmldoc/visual.html#Visual).
+- Os [diferentes](https://vimdoc.sourceforge.net/htmldoc/intro.html#Normal) [modos](http://vimdoc.sourceforge.net/htmldoc/insert.html#Insert) são [realmente](http://vimdoc.sourceforge.net/htmldoc/cmdline.html#Command-line) uma [ótima idéia](http://vimdoc.sourceforge.net/htmldoc/visual.html#Visual).
 - Rápido que é o diabo.
 - [Tim pope](https://github.com/tpope).
-- [vim-diff](http://vimdoc.sourceforge.net/htmldoc/diff.html).
+- [vim-diff](https://vimdoc.sourceforge.net/htmldoc/diff.html).
 
 Git
 ---
@@ -107,13 +107,13 @@ Já passei pelo sonho de acreditar em ferramentas mágicas. Hoje aprendi que nó
 
 E você, o que tem usado?
 
-PS: Comente, me manda um [tweet](http://twitter.com/augustohp) com suas ferramentas.
-PPS: Não tem onde postar? Use um [gist](http://gist.github.com) e me passe o link. ;)
+PS: Comente, me manda um [tweet](https://twitter.com/augustohp) com suas ferramentas.
+PPS: Não tem onde postar? Use um [gist](https://gist.github.com) e me passe o link. ;)
 
-[zsh]: http://www.zsh.org/
-[bash]: http://www.gnu.org/software/bash/
-[vagrant]: http://www.vagrantup.com/
-[puppet]: http://puppetlabs.com/
-[puppet-forge]: http://forge.puppetlabs.com/
-[vim]: http://www.vim.org/
+[zsh]: https://www.zsh.org/
+[bash]: https://www.gnu.org/software/bash/
+[vagrant]: https://www.vagrantup.com/
+[puppet]: https://puppetlabs.com/
+[puppet-forge]: https://forge.puppetlabs.com/
+[vim]: https://www.vim.org/
 [debian-posix]: https://wiki.debian.org/POSIX

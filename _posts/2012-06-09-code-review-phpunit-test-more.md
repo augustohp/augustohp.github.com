@@ -48,7 +48,7 @@ que serão utilizadas.
 ```
 
 A constante `DEBUG_BACKTRACE_PROVIDE_OBJECT` passou a existir somente na 
-versão 5.3.6 quando a assinatura da função [debug_backtrace()](http://www.php.net/manual/pt_BR/function.debug-backtrace.php)
+versão 5.3.6 quando a assinatura da função [debug_backtrace()](https://www.php.net/manual/pt_BR/function.debug-backtrace.php)
 sofreu alteração.
 
 O que está sendo feito é a declaração da constante a fim de que ela exista e se
@@ -69,7 +69,7 @@ Aí temos a primeira função, que obrigatoriamente recebe um argumento. A assin
 da função é a mesma do método que ela utiliza, por motivos óbvios isso já é extremamente
 interessante.
 
-A primeira coisa que a função faz é retornar o *[backtrace](http://wikipedia.org/wiki/Backtrace)* 
+A primeira coisa que a função faz é retornar o *[backtrace](https://wikipedia.org/wiki/Backtrace)* 
 da aplicação COM as instâncias de objetos reais que foram utilizadas. Isso significa
 que você pode reutilizar os objetos que foram utilizados para chegar até aquele
 momento.
@@ -92,13 +92,13 @@ o *TestCase* onde a função foi chamada, ele salva uma referência à este obje
 ```
 
 Menção den honra à última função: `dump()`. Ela tem uma utilidade sim dentro
-da suite de testes, já que o PHPUnit gerencia o *[Output Buffer](http://www.php.net/manual/en/book.outcontrol.php)* 
+da suite de testes, já que o PHPUnit gerencia o *[Output Buffer](https://www.php.net/manual/en/book.outcontrol.php)* 
 para conseguir imprimir o formato desejado do resultado da execução dos testes, 
 seja ele: os famigerados pontos (.), o [TestDox](https://en.wikipedia.org/wiki/TestDox) 
 ou qualquer outro desejado.
 
-A função [ob_flush()](http://php.net/ob_flush) envia para o output o conteúdo 
-do buffer que está sendo controlado, logo vemos output do [var_dump()](http://php.net/var_dump)
+A função [ob_flush()](https://php.net/ob_flush) envia para o output o conteúdo 
+do buffer que está sendo controlado, logo vemos output do [var_dump()](https://php.net/var_dump)
 como esperado.
 
 Considerações
