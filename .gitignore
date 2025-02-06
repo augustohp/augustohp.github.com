@@ -5,3 +5,5 @@ package.box
 _plugins
 .sass-cache
 res/*
+.lycheecache
+report-broken-links.txt
