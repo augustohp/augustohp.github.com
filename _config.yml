@@ -71,7 +71,7 @@ footer_links:
       icon: fab fa-stack-exchange
 feed:
     path: atom.xml
-google_analytics: UA-5680712-1
+google_analytics: G-C74KMW7XNZ
 disqus:
     shortname: augustopascuttisblog
 twitter:
