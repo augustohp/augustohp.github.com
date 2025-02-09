@@ -1,0 +1,35 @@
+{
+    "name": "Jekyll GitHub Pages",
+    "build": {
+        "dockerfile": "../usr/Dockerfile",
+        "context": ".."
+    },
+    "forwardPorts": [
+        4000
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-yaml",
+                "shopify.ruby-lsp",
+                "sissel.shopify-liquid",
+                "bierner.github-markdown-preview"
+            ],
+            "settings": {
+                "ruby.useBundler": true,
+                "ruby.useLanguageServer": true,
+                "ruby.lint": {
+                    "rubocop": true
+                },
+                "editor.formatOnSave": true,
+                "files.associations": {
+                    "*.html": "liquid",
+                    "*.md": "markdown"
+                }
+            }
+        }
+    },
+    "onCreateCommand": "bundle install",
+    "postCreateCommand": "bundle exec jekyll serve",
+    "remoteUser": "root"
+}
