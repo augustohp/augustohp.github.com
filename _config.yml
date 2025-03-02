@@ -7,6 +7,16 @@ comments: false
 remote_theme: "mmistakes/so-simple-theme"
 read_time: true
 
+exclude:
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - docker-compose.yml
+  - README.md
+  - usr
+  - _drafts
+
 timezone: America/Sao_Paulo
 date_format: "%Y-%m-%d"
 source: .
