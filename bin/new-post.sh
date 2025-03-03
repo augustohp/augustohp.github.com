@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
+# vim: noet ts=4 sw=4 ft=sh:
 
 set -e
 
-AWK=$(which awk)
-SED=$(which sed)
 PROGRAM="$0"
 BASEDIR=$(dirname "$0")
 POSTS_DIR="$BASEDIR/../_posts"
 
-for program in AWK SED
-do
-	if [ -z "$${!program@}" ]
-	then
-		echo "Missing '$program' binary."
-		exit 1
-	fi
-done
+if [ -n "$DEBUG" ]
+then 
+	set -x
+fi
+
 
 displayHelp()
 {
@@ -24,21 +20,41 @@ displayHelp()
 	EOT
 }
 
-today=$(date "+%Y-%m-%d")
-title=$@
-title_slugfied=$(echo "$title" | $AWK '{print tolower($0)}' | sed 's/ /-/g')
-post_file="${POSTS_DIR}/${today}-${title_slugfied}.md"
+assert_environment()
+{
+	 for program in awk
+	 do
+		  if [ -z "$(command -v $program)" ]
+		  then
+			   echo "Error: Missing '$program'!"
+			   exit 1
+		  fi
+	  done
+  }
 
-if [ -z "$title" ]
-then
-	echo "A title is needed."
-	exit 1
-fi
+# Usage: echo "this is a title" | slugify
+slugify()
+{
+	awk '{
+		gsub(/[^a-zA-Z0-9\-\s]/, "-")
+		$0 = tolower($0)
+		print
+	}'
+}
 
-touch $post_file
-cat <<-EOT > "${post_file}"
+# Usage: create_post_file "This is a great post title"
+create_post_file()
+{
+	post_title="$1"
+
+	title_slugfied="$(echo "${post_title}" | slugify)"
+	today="$(date '+%Y-%m-%d')"
+	post_file="${POSTS_DIR}/${today}-${title_slugfied}.md"
+	touch $post_file
+
+	cat <<-EOT > "${post_file}"
 	---
-	title: $title
+	title: $post_title
 	layout: post
 	date: $today
 	category:
@@ -49,5 +65,27 @@ cat <<-EOT > "${post_file}"
 	<!--
 	vim: spell spelllang=pt
 	-->
-EOT
-echo $post_file
+	EOT
+
+	echo $post_file
+ }
+
+ main()
+ {
+	 post_title="$@"
+
+	 assert_environment
+	 if [ -z "$post_title" ]
+	 then
+		 read -p "Title of the post: " post_title
+	 fi
+	 if [ -z "$post_title" ]
+	 then
+		 echo "Error: A title is needed!"
+		 exit 1
+	 fi
+
+	 create_post_file "${post_title}"
+ }
+
+ main "$@"
