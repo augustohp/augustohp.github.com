@@ -1,7 +1,7 @@
 title: "/dev/null"
 locale: "pt-BR"
 description: "Algumas coisas acabam aqui..."
-url: "http://blog.augustopascutti.com"
+url: "https://blog.augustopascutti.com"
 search: false
 comments: false
 remote_theme: "mmistakes/so-simple-theme"
@@ -45,7 +45,7 @@ kramdown:
 author:
   name: "Augusto Pascutti"
   email: "augusto.hp@gmail.com"
-  picture: "http://s.gravatar.com/avatar/89de242e444d231e9928320af0417571?s=200"
+  picture: "https://s.gravatar.com/avatar/89de242e444d231e9928320af0417571?s=200"
   twitter: "@augustohp"
   links:
     - title: LastFM
@@ -61,7 +61,7 @@ author:
       url: https://www.linkedin.com/in/augustohp
       icon: fab fa-linkedin
     - title: StackExchange
-      url: http://stackoverflow.com/users/447920/augusto-pascutti
+      url: https://stackoverflow.com/users/447920/augusto-pascutti
       icon: fab fa-stack-exchange
 footer_links:
   - title: LastFM
@@ -77,7 +77,7 @@ footer_links:
     url: https://www.linkedin.com/in/augustohp
     icon: fab fa-linkedin
   - title: StackExchange
-    url: http://stackoverflow.com/users/447920/augusto-pascutti
+    url: https://stackoverflow.com/users/447920/augusto-pascutti
     icon: fab fa-stack-exchange
 feed:
   path: atom.xml
