@@ -3,7 +3,8 @@ locale: "pt-BR"
 description: "Algumas coisas acabam aqui..."
 url: "https://blog.augustopascutti.com"
 search: false
-comments: false
+disqus:
+  shortname: augustopascuttisblog
 remote_theme: "mmistakes/so-simple-theme"
 read_time: true
 

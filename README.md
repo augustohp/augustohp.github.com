@@ -49,3 +49,21 @@ orb, execute o setup novamente antes de usar `bundle` em shells de login.
 O serviço de preview continua independente desse hook; o setup não altera
 `~/.env` nem reinicia o processo do Amp que já está em execução.
 O tema remoto do Jekyll é baixado durante o build, que ainda precisa de acesso à rede.
+
+## Comentários
+
+O tema usa `disqus.shortname: augustopascuttisblog`, não `comments` na configuração
+global. Essa configuração foi removida em [fevereiro de 2025](https://github.com/augustohp/augustohp.github.com/commit/daff4e2d0bf8dd67e91a5ef9ae2404d5a9bd9694),
+antes da migração de dependências e publicação via Actions (#76).
+
+`_includes/disqus-comments.html` preserva as URLs e os identificadores HTTP
+anteriores à migração para HTTPS. Esses valores são chaves de discussão no
+Disqus, não requisições HTTP: páginas, canonical e script continuam em HTTPS.
+Não altere o fórum, as chaves ou os permalinks sem conferir as discussões
+existentes no Disqus; isso pode separar os comentários históricos.
+
+Os comentários aparecem somente em builds de produção, como no Pages:
+`JEKYLL_ENV=production bundle exec jekyll build --safe`. O preview de
+desenvolvimento não carrega o Disqus. Para desabilitar em um post específico,
+use `comments: false` no front matter. `python3 bin/validate-site.py` valida
+o build de produção, incluindo o fórum e as chaves históricas.
