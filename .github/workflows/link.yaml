@@ -39,6 +39,31 @@ jobs:
           format: json
           output: report-broken-links.json
 
+      # Build only after checking: generated HTML must not change Lychee's inputs.
+      - name: Read locked toolchain
+        id: toolchain
+        if: ${{ !cancelled() && steps.lychee.outputs.exit_code != '' }}
+        run: |
+          set -e
+          ruby_version=$(awk '/^RUBY VERSION$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+$/, ""); print }' Gemfile.lock)
+          bundler_version=$(awk '/^BUNDLED WITH$/ { getline; gsub(/ /, ""); print }' Gemfile.lock)
+          : "${ruby_version:?Gemfile.lock must pin Ruby}"
+          : "${bundler_version:?Gemfile.lock must pin Bundler}"
+          echo "ruby=$ruby_version" >> "$GITHUB_OUTPUT"
+          echo "bundler=$bundler_version" >> "$GITHUB_OUTPUT"
+      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
+        if: ${{ !cancelled() && steps.lychee.outputs.exit_code != '' }}
+        with:
+          ruby-version: ${{ steps.toolchain.outputs.ruby }}
+          bundler: ${{ steps.toolchain.outputs.bundler }}
+          bundler-cache: true
+      - name: Locate links in published pages
+        if: ${{ !cancelled() && steps.lychee.outputs.exit_code != '' }}
+        run: python3 bin/link-report-sources.py report-broken-links.json "$RUNNER_TEMP/link-report-sources.json"
+        env:
+          BUNDLE_FROZEN: 'true'
+          PAGES_REPO_NWO: ${{ github.repository }}
+
       - name: Summarize and upsert link report
         if: ${{ !cancelled() && steps.lychee.outputs.exit_code != '' }}
         uses: actions/github-script@v8
@@ -48,7 +73,21 @@ jobs:
         with:
           script: |
             const fs = require('node:fs');
+            const path = require('node:path');
             const report = JSON.parse(fs.readFileSync('report-broken-links.json', 'utf8'));
+            // A rendering failure must not prevent the original summary/issue update.
+            const indexPath = path.join(process.env.RUNNER_TEMP, 'link-report-sources.json');
+            const sources = fs.existsSync(indexPath) ? JSON.parse(fs.readFileSync(indexPath, 'utf8')) : {};
+            const sourceLinks = link => {
+              const page = sources[path.resolve(link.source)];
+              if (page) {
+                const locations = page.links[link.url] ?? [page.url];
+                return locations.map((url, i) => `[published post${locations.length > 1 ? ` ${i + 1}` : ''}](<${url}>)`).join(', ');
+              }
+              const source = path.relative(process.cwd(), path.resolve(link.source)).split(path.sep).map(encodeURIComponent).join('/');
+              const line = link.span?.line ? `#L${link.span.line}` : '';
+              return `[repository source](<${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/blob/${context.sha}/${source}${line}>)`;
+            };
             const broken = [];
             const blocked = [];
             for (const [source, links] of Object.entries(report.error_map ?? {})) {
@@ -66,9 +105,10 @@ jobs:
             }
             const section = (title, links) => `## ${title} (${links.length})\n\n` +
               (links.length ? links.map(link =>
-                `- ${link.url} — ${link.status.text} (source: ${link.source})`
+                `- ${link.url} — ${link.status.text} (source: ${sourceLinks(link)})`
               ).join('\n') : 'None.') + '\n\n';
             const body = '<!-- link-health-report -->\n# Link health report\n\n' +
+              'Published-post links point to the nearest preceding heading in rendered HTML (or the page when no heading exists). Repeated URLs list every matching section; these are section anchors, not exact-occurrence anchors. Sources without a published page link to the repository.\n\n' +
               section('Broken or unverified links', broken) +
               section('Crawler blocking / rate limiting', blocked) +
               'Blocked links still need manual verification; they are not counted as healthy.\n\n' +

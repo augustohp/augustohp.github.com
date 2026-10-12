@@ -50,6 +50,27 @@ O serviço de preview continua independente desse hook; o setup não altera
 `~/.env` nem reinicia o processo do Amp que já está em execução.
 O tema remoto do Jekyll é baixado durante o build, que ainda precisa de acesso à rede.
 
+### Origens no relatório de links
+
+O workflow Link Health mantém o JSON do Lychee como fonte dos resultados.
+Depois da checagem, `bin/link-report-sources.py` faz um build de produção seguro
+com o bundle travado, fora da árvore checada. O Jekyll resolve as URLs publicadas;
+o HTML renderizado fornece os IDs reais dos títulos.
+
+Os links de origem apontam à seção precedente mais próxima, não à ocorrência
+exata. Antes da primeira seção, o título do post (`#page-title`) é usado quando
+existe. URLs repetidas listam todas as seções correspondentes, sem tentar inferir
+uma ocorrência a partir do único `span: {line, column}` do Lychee. Sem título
+precedente, ou quando a URL não aparece no HTML, o destino é a página sem fragmento.
+Arquivos não publicados (ou falha no build auxiliar) recebem um link ao código
+no commit checado, com a linha do span quando disponível. Uma falha de build
+continua deixando o job vermelho, mas não impede o resumo e a atualização da issue.
+
+Regressão local: `python3 bin/test-link-report-sources.py` (requer o bundle e
+Lychee 0.24.2 do setup). Usa Jekyll real e um servidor local 404 para validar spans,
+links repetidos, referências, escapes, datas, categorias e permalinks. Executa o
+script do workflow com API simulada, sem escrever em issues do GitHub.
+
 ## Comentários
 
 O tema usa `disqus.shortname: augustopascuttisblog`, não `comments` na configuração

@@ -6,7 +6,7 @@ category: NodeJs
 
 Há algum tempo venho brincando com [NodeJS](https://nodejs.org/). A
 brincadeira começou com uma pesquisa sobre gerenciadores de pacote a um
-bom tempo atrás até que cheguei ao [NPM](https://npmjs.org/) que possui
+bom tempo atrás até que cheguei ao [NPM](https://www.npmjs.com/) que possui
 uma arquitetura relativamente boa e extremamente interessante.
 
 Mas não estou aqui pra falar do NPM, e sim do NodeJS. O principal fator
