@@ -69,7 +69,7 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 [5]: https://web.archive.org/web/20170718104420/www.linuxcommand.org:80/learning_the_shell.php
 [6]: https://www.oreilly.com/openbook/debian/book/ch13_01.html
 [7]: https://www.amazon.com/Power-Tools-Third-Shelley-Powers/dp/0596003307
-[vim]: https://www.vim.org/
+[VIM]: https://www.vim.org/
 [emacs]: https://www.gnu.org/software/emacs/
 [subl]: https://www.sublimetext.com/
 [osx]: https://www.apple.com/osx/

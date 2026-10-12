@@ -140,7 +140,7 @@ banco de dados. Vá arrumar seu código!
 PS: o que não quer dizer que [RuntimeException][]s não devam produzir mudanças no
 código.
 
-[php]: https://php.net "PHP: Hipertext Preprocessor"
+[PHP]: https://php.net "PHP: Hipertext Preprocessor"
 [spl_exceptions]: https://www.php.net/manual/en/spl.exceptions.php "PHP Manual: SPL Exceptions"
 [exceptions]: https://php.net/exceptions "PHP Manual: Exceptions"
 [oo]: https://en.wikipedia.org/wiki/Object-oriented_programming "Wikipedia: Object Oriented Programming"
