@@ -17,6 +17,7 @@ exclude:
   - usr
   - vendor
   - _drafts
+  - report-broken-links.*
 
 timezone: America/Sao_Paulo
 date_format: "%Y-%m-%d"
