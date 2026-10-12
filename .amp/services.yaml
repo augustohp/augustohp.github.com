@@ -1,6 +1,10 @@
 services:
   jekyll:
-    command: bundle exec jekyll serve --host 0.0.0.0 --port "$PORT"
+    # Do not depend on login-profile ordering or an inherited Ruby PATH.
+    # Read versions inline: systemd expands shell-variable references before Bash.
+    command: |
+      exec "$HOME/.local/bin/mise" exec "ruby@$(awk '/^RUBY VERSION$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+$/, ""); print }' Gemfile.lock)" -- \
+        bundle "_$(awk '/^BUNDLED WITH$/ { getline; gsub(/ /, ""); print }' Gemfile.lock)_" exec jekyll serve --host 0.0.0.0 --port "$PORT"
     health: /
     portal:
       title: Blog preview

@@ -32,11 +32,20 @@ de Docker. Execuções posteriores reaproveitam as ferramentas e gems instaladas
 Não há hook de resume: este projeto não precisa de autenticação ou reparos ao acordar.
 
 Para preparar manualmente o ambiente, execute `./.agents/setup`. As ferramentas
-ficam disponíveis em novos shells de login dentro do repositório.
+ficam disponíveis em novos shells de login dentro do repositório e seus
+subdiretórios. O setup reposiciona somente o hook deste projeto no final de
+`~/.bash_profile`, depois do carregamento de `~/.env` pelo Amp, que pode
+sobrescrever o `PATH`. O hook não ativa Ruby fora do repositório.
 
 * Build: `bundle exec jekyll build`
 * Links: `make links`
 * Preview supervisionado e acessível pelo portal: `amp orb services ensure`
 
 O preview é declarado em `.amp/services.yaml`; o setup não inicia servidores.
+O serviço usa `$HOME/.local/bin/mise exec` explicitamente, com Ruby e Bundler
+derivados do `Gemfile.lock`, sem depender do `PATH` herdado ou da ordem do profile.
+Se o Amp acrescentar outro reset de `PATH` depois do hook em uma atualização do
+orb, execute o setup novamente antes de usar `bundle` em shells de login.
+O serviço de preview continua independente desse hook; o setup não altera
+`~/.env` nem reinicia o processo do Amp que já está em execução.
 O tema remoto do Jekyll é baixado durante o build, que ainda precisa de acesso à rede.
