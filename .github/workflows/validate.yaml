@@ -1,0 +1,66 @@
+name: PR validation
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Locked production build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      BUNDLE_FROZEN: "true"
+      JEKYLL_ENV: production
+      PAGES_REPO_NWO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Read locked toolchain
+        id: toolchain
+        run: |
+          ruby_version=$(awk '/^RUBY VERSION$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+$/, ""); print }' Gemfile.lock)
+          bundler_version=$(awk '/^BUNDLED WITH$/ { getline; gsub(/ /, ""); print }' Gemfile.lock)
+          : "${ruby_version:?Gemfile.lock must pin Ruby}"
+          : "${bundler_version:?Gemfile.lock must pin Bundler}"
+          echo "ruby=$ruby_version" >> "$GITHUB_OUTPUT"
+          echo "bundler=$bundler_version" >> "$GITHUB_OUTPUT"
+
+      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
+        with:
+          ruby-version: ${{ steps.toolchain.outputs.ruby }}
+          bundler: ${{ steps.toolchain.outputs.bundler }}
+          bundler-cache: true
+
+      - name: Build the frozen bundle in production safe mode
+        run: |
+          bundle exec jekyll build --safe --trace
+          git diff --exit-code -- Gemfile Gemfile.lock
+
+      - name: Verify rendered site
+        run: python3 bin/validate-site.py
+
+      - name: Audit locked dependencies against current advisories
+        run: |
+          # Keep audit tooling outside the site's frozen dependency graph.
+          export GEM_HOME="$RUNNER_TEMP/bundler-audit"
+          export GEM_PATH="$GEM_HOME"
+          gem install bundler-audit --version 0.9.3 --no-document --env-shebang
+          set -- check --update
+          # Temporary exception: https://github.com/augustohp/augustohp.github.com/issues/65
+          # Only the existing locked Rubyzip version qualifies. After #65 removes
+          # or upgrades it, the exception stops applying; delete this block then.
+          if grep -qx '    rubyzip (2.4.1)' Gemfile.lock
+          then
+            echo '::warning::Rubyzip GHSA-47m2-wp7j-p9vc remains unresolved; tracked by #65.'
+            set -- "$@" --ignore GHSA-47m2-wp7j-p9vc
+          fi
+          "$GEM_HOME/bin/bundle-audit" "$@"
