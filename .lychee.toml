@@ -27,8 +27,8 @@ insecure = true
 scheme = ["http", "https", "mailto"]
 require_https = false
 method = "get"
-header = []
-base = "https://blog.augustopascutti.com"
+header = {}
+base_url = "https://blog.augustopascutti.com"
 
 #############################  Exclusions  ##########################
 skip_missing = false

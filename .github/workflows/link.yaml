@@ -19,13 +19,14 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7.0.1
 
       - name: Broken Links? 🤔
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: --config ./.lychee.toml --no-progress .
+          lycheeVersion: v0.24.2
           failIfEmpty: false
           debug: false
           format: markdown
@@ -33,7 +34,7 @@ jobs:
 
       - name: Report broken links
         if: ${{ failure() && env.OPTION_CREATE_ISSUE == 'true' }}
-        uses: peter-evans/create-issue-from-file@v4
+        uses: peter-evans/create-issue-from-file@v6.0.0
         with:
           title: 🤖 Broken Links Report
           content-filepath: report-broken-links.md
