@@ -71,22 +71,30 @@ main()
 	fi
 
 	# Amp and supervised services use new login shells, not this setup process.
+	# Replace our hook and put it AFTER Amp's managed ~/.env loader, which resets PATH.
 	profile_marker="# augustohp.github.com orb toolchain"
-	if ! grep -Fqx "$profile_marker" "$HOME/.bash_profile" 2>/dev/null
-	then
-		cat >> "$HOME/.bash_profile" <<-EOF
-
+	profile_tmp="$(mktemp)"
+	trap 'rm -f "$profile_tmp"' EXIT
+	touch "$HOME/.bash_profile"
+	awk -v marker="$profile_marker" '
+		$0 == marker { skip = 1 }
+		skip { if ($0 == "fi") skip = 0; next }
+		{ print }
+	' "$HOME/.bash_profile" > "$profile_tmp"
+	cat >> "$profile_tmp" <<-EOF
 		$profile_marker
 		# Keep the guard shell-local: a nested login shell may reset PATH.
 		if [[ -z "\${augustohp_orb_env:-}" && ( "\$PWD" == "$repo_root" || "\$PWD" == "$repo_root/"* ) ]]; then
 			augustohp_orb_env=1
 			export PATH="\$HOME/.local/bin:\$PATH"
 			orb_ruby_version=\$(awk '/^RUBY VERSION\$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+\$/, ""); print }' "$repo_root/Gemfile.lock")
-			eval "\$(mise env --shell bash "ruby@\$orb_ruby_version")"
+			eval "\$("\$HOME/.local/bin/mise" env --shell bash "ruby@\$orb_ruby_version")"
 			unset orb_ruby_version
 		fi
 		EOF
-	fi
+	cat "$profile_tmp" > "$HOME/.bash_profile"
+	rm -f "$profile_tmp"
+	trap - EXIT
 
 	ruby --version
 	bundle "_${bundler_version}_" --version
