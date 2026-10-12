@@ -7,4 +7,6 @@ _plugins
 res/*
 .lycheecache
 report-broken-links.txt
+report-broken-links.md
+report-broken-links.json
 .amp/portals/*
