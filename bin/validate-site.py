@@ -4,6 +4,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+import json
 import xml.etree.ElementTree as ET
 
 
@@ -90,4 +91,26 @@ require(all(url.scheme in ("http", "https") and url.netloc for url in urls),
 require({prefix + "/", prefix + "/posts/", post_path} <= {url.path for url in urls},
         "Sitemap missing homepage, archive, or representative post")
 
-print("PASS: homepage, archive, post, CSS, Atom entries, and sitemap")
+# Disqus thread keys predate the site's HTTPS migration. Check both an encoded
+# historical permalink and the latest post's custom, trailing-slash permalink.
+comment_paths = ["/php,%20jardinagem/2011/07/28/mvc-errado.html",
+                 urlsplit(entries[0].find("a:link[@rel='alternate']", ns).get("href")).path]
+for path in comment_paths:
+    page = Page(output_path(path))
+    require(sum(attrs.get("id") == "disqus_thread" for _, attrs in page.tags) == 1,
+            f"Disqus container missing or duplicated: {path}")
+    script = "\n".join(page.text)
+    require("https://augustopascuttisblog.disqus.com/embed.js" in script,
+            f"Historical Disqus forum missing: {path}")
+    thread_url = json.dumps("http://blog.augustopascutti.com" + path)
+    for setting in ("url", "identifier"):
+        require(f"this.page.{setting} = {thread_url};" in script,
+                f"Historical Disqus {setting} changed: {path}")
+    require(any(tag == "link" and attrs.get("rel") == "canonical"
+                and attrs.get("href") == "https://blog.augustopascutti.com" + path
+                for tag, attrs in page.tags), f"HTTPS canonical changed: {path}")
+for page in (home, archive):
+    require(not any(attrs.get("id") == "disqus_thread" for _, attrs in page.tags),
+            "Disqus must only appear on posts")
+
+print("PASS: homepage, archive, post, CSS, Atom entries, sitemap, and historical Disqus keys")
