@@ -42,10 +42,7 @@ jobs:
 
       - name: Build the frozen bundle in production safe mode
         run: |
-          # bundler-cache installs under vendor/bundle. Preserve site exclusions
-          # while preventing gem templates from becoming posts or public files.
-          ruby -ryaml -e 'puts({"exclude" => YAML.load_file("_config.yml").fetch("exclude", []) | ["vendor"]}.to_yaml)' > "$RUNNER_TEMP/jekyll-validation.yml"
-          bundle exec jekyll build --safe --trace --config "_config.yml,$RUNNER_TEMP/jekyll-validation.yml"
+          bundle exec jekyll build --safe --trace
           git diff --exit-code -- Gemfile Gemfile.lock
 
       - name: Verify rendered site
@@ -57,13 +54,4 @@ jobs:
           export GEM_HOME="$RUNNER_TEMP/bundler-audit"
           export GEM_PATH="$GEM_HOME"
           gem install bundler-audit --version 0.9.3 --no-document --env-shebang
-          set -- check --update
-          # Temporary exception: https://github.com/augustohp/augustohp.github.com/issues/65
-          # Only the existing locked Rubyzip version qualifies. After #65 removes
-          # or upgrades it, the exception stops applying; delete this block then.
-          if grep -qx '    rubyzip (2.4.1)' Gemfile.lock
-          then
-            echo '::warning::Rubyzip GHSA-47m2-wp7j-p9vc remains unresolved; tracked by #65.'
-            set -- "$@" --ignore GHSA-47m2-wp7j-p9vc
-          fi
-          "$GEM_HOME/bin/bundle-audit" "$@"
+          "$GEM_HOME/bin/bundle-audit" check --update
