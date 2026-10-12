@@ -57,7 +57,7 @@ main()
 	fi
 
 	# Match the link checker version used by usr/Dockerfile.
-	if ! command -v lychee >/dev/null 2>&1 || [ "$(lychee --version)" != 'lychee 0.18.0' ]
+	if ! command -v lychee >/dev/null 2>&1 || [ "$(lychee --version)" != 'lychee 0.24.2' ]
 	then
 		case "$(uname -m)" in
 			x86_64) lychee_arch=x86_64 ;;
@@ -65,8 +65,9 @@ main()
 			*) printf 'Unsupported Lychee architecture\n' >&2; exit 1 ;;
 		esac
 		mkdir -p "$HOME/.local/bin"
-		step 'Install Lychee 0.18.0' bash -o pipefail -c 'curl -fsSL "$1" | tar -xz -C "$HOME/.local/bin" lychee' bash \
-			"https://github.com/lycheeverse/lychee/releases/download/lychee-v0.18.0/lychee-$lychee_arch-unknown-linux-gnu.tar.gz"
+		step 'Install Lychee 0.24.2' bash -o pipefail -c 'curl -fsSL "$1" | tar -xz --strip-components=1 -C "$HOME/.local/bin" "$2/lychee"' bash \
+			"https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-$lychee_arch-unknown-linux-musl.tar.gz" \
+			"lychee-$lychee_arch-unknown-linux-musl"
 	fi
 
 	# Amp and supervised services use new login shells, not this setup process.

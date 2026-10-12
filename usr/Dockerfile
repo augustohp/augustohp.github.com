@@ -7,8 +7,9 @@ RUN bundle install
 
 # https://github.com/lycheeverse/lychee
 # Checks for broken links
-ADD https://github.com/lycheeverse/lychee/releases/download/lychee-v0.18.0/lychee-x86_64-unknown-linux-gnu.tar.gz /tmp
-RUN tar -xvf /tmp/lychee-x86_64-unknown-linux-gnu.tar.gz -C /usr/local/bin \
+ADD https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-musl.tar.gz /tmp
+RUN tar -xvf /tmp/lychee-x86_64-unknown-linux-musl.tar.gz --strip-components=1 \
+        -C /usr/local/bin lychee-x86_64-unknown-linux-musl/lychee \
     && chmod +x /usr/local/bin/lychee \
     && lychee --version
 
