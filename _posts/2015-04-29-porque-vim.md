@@ -72,7 +72,7 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 [VIM]: https://www.vim.org/
 [emacs]: https://www.gnu.org/software/emacs/
 [subl]: https://www.sublimetext.com/
-[osx]: https://www.apple.com/osx/
+[osx]: https://www.apple.com/os/macos/
 [1]: https://blog.augustopascutti.com/desenvolvimento/2013/11/06/Meu_ambiente_de_trabalho.html
 [2]: https://www.slideshare.net/augustopascutti/logs-36298518
 [linux]: https://kernel.org/
@@ -80,7 +80,7 @@ PS: Fiz uma palestra sobre tudo isso, se você quiser [ver os slides, eles estã
 [PHP]: https://php.net/
 [mysql]: https://www.mysql.com/
 [lamp]: https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29
-[wamp]: https://www.wampserver.com/en/
+[wamp]: https://wampserver.aviatechno.net/
 [httpd]: https://httpd.apache.org/
 [httpd-security]: https://httpd.apache.org/docs/current/howto/auth.html
 [httpd-proxy]: https://httpd.apache.org/docs/current/mod/mod_proxy.html

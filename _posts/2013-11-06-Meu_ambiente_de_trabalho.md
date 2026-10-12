@@ -74,13 +74,13 @@ Comecei a usar ele assim que saiu o Textmate 2, e foi uma grata surpresa.
 
 Tirando toda idéia [poser](https://www.wikihow.com/Tell-if-You-Are-a-Metal-Poser) de dizer que uso [vim][], diria que ele é um vício bem vindo. Aprender é uma tarefa constante. Com o [vim][] aprendo muito mais do que eu gostaria, mas todos extremamente gratificantes!
 
-- Os [atalhos de movimentação](https://vimdoc.sourceforge.net/htmldoc/usr_03.html) são **um absurdo de práticos**.
+- Os [atalhos de movimentação](https://vimhelp.org/usr_03.txt.html) são **um absurdo de práticos**.
 - Disponível em qualquer \*nix.
 - Ele **realmente** sai do seu caminho.
-- Os [diferentes](https://vimdoc.sourceforge.net/htmldoc/intro.html#Normal) [modos](http://vimdoc.sourceforge.net/htmldoc/insert.html#Insert) são [realmente](http://vimdoc.sourceforge.net/htmldoc/cmdline.html#Command-line) uma [ótima idéia](http://vimdoc.sourceforge.net/htmldoc/visual.html#Visual).
+- Os [diferentes](https://vimhelp.org/intro.txt.html#Normal) [modos](https://vimhelp.org/insert.txt.html#Insert) são [realmente](https://vimhelp.org/cmdline.txt.html#Command-line) uma [ótima idéia](https://vimhelp.org/visual.txt.html#Visual).
 - Rápido que é o diabo.
 - [Tim pope](https://github.com/tpope).
-- [vim-diff](https://vimdoc.sourceforge.net/htmldoc/diff.html).
+- [vim-diff](https://vimhelp.org/diff.txt.html).
 
 Git
 ---
@@ -113,7 +113,7 @@ PPS: Não tem onde postar? Use um [gist](https://gist.github.com) e me passe o l
 [zsh]: https://www.zsh.org/
 [bash]: https://www.gnu.org/software/bash/
 [vagrant]: https://www.vagrantup.com/
-[puppet]: https://puppetlabs.com/
+[puppet]: https://www.puppet.com/
 [puppet-forge]: https://forge.puppetlabs.com/
 [vim]: https://www.vim.org/
 [debian-posix]: https://wiki.debian.org/POSIX

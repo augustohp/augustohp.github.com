@@ -89,7 +89,7 @@ O uso do Singleton aí em cima é de um exemplo real. Do Zend Framework.
 Ele está certo? Não.
 
 Porque não!? Eu não vou entrar no mérito de discutir o que é o
-[FrontController](https://java.sun.com/blueprints/patterns/FrontController.html),
+[FrontController](https://www.oracle.com/java/technologies/front-controller.html),
 mas eu explico pra vocês.
 
 Front Controller é um Design Pattern que resolve o problema de ser o
