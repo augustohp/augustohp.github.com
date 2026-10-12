@@ -71,6 +71,14 @@ Lychee 0.24.2 do setup). Usa Jekyll real e um servidor local 404 para validar sp
 links repetidos, referências, escapes, datas, categorias e permalinks. Executa o
 script do workflow com API simulada, sem escrever em issues do GitHub.
 
+As URLs exatas `https://wordpress.com/` e `https://www.npmjs.com/` foram
+verificadas manualmente na #58. Apenas o status 403 nesses dois destinos é
+tratado como bloqueio conhecido: aparece no resumo, mas não falha o job nem
+cria/atualiza a issue por si só. Status 200 continua válido; 404, outros erros
+e timeouts voltam para revisão, inclusive nessas URLs. Não há exceção por
+domínio nem aceitação global de 403. Os demais bloqueios/rate limits mantêm
+o comportamento anterior de aviso e relatório.
+
 ## Comentários
 
 O tema usa `disqus.shortname: augustopascuttisblog`, não `comments` na configuração

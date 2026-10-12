@@ -90,9 +90,16 @@ jobs:
             };
             const broken = [];
             const blocked = [];
+            const verified = [];
+            // Manually verified in #58; accept only 403 at these exact destinations.
+            const verified403 = new Set(['https://wordpress.com/', 'https://www.npmjs.com/']);
             for (const [source, links] of Object.entries(report.error_map ?? {})) {
               for (const link of links) {
                 const code = link.status.code;
+                if (code === 403 && verified403.has(link.url)) {
+                  verified.push({ source, ...link });
+                  continue;
+                }
                 // These exact profile/status pairs are known crawler blocks, not proof of a dead link.
                 const crawlerBlocked = code === 429 ||
                   (code === 406 && link.url === 'https://www.last.fm/user/augusto_hp') ||
@@ -111,6 +118,8 @@ jobs:
               'Published-post links point to the nearest preceding heading in rendered HTML (or the page when no heading exists). Repeated URLs list every matching section; these are section anchors, not exact-occurrence anchors. Sources without a published page link to the repository.\n\n' +
               section('Broken or unverified links', broken) +
               section('Crawler blocking / rate limiting', blocked) +
+              section('Manually verified links / known 403 blocking', verified) +
+              'The exact WordPress.com and npm homepage URLs were manually verified in #58. Their 403 responses do not fail the check or create a report issue; other failures still require review.\n\n' +
               'Blocked links still need manual verification; they are not counted as healthy.\n\n' +
               `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})\n`;
             fs.writeFileSync('report-broken-links.md', body);
@@ -118,7 +127,7 @@ jobs:
 
             // Keep infrastructure/configuration failures red even if no links were reported.
             if (broken.length || !['0', '2'].includes(process.env.LYCHEE_EXIT_CODE) ||
-                (process.env.LYCHEE_EXIT_CODE !== '0' && !blocked.length)) {
+                (process.env.LYCHEE_EXIT_CODE !== '0' && !(blocked.length + verified.length))) {
               core.setFailed('Broken/unverified links or link-checker failure; see the job summary.');
             }
             if (blocked.length) core.warning('Crawler-blocked links require manual verification.');

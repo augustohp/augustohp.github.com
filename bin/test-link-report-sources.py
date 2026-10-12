@@ -138,8 +138,41 @@ const context = {serverUrl: 'https://github.com', repo: {owner: 'augustohp', rep
   const fallback = fs.readFileSync('report-broken-links.md', 'utf8');
   assert(fallback.includes('/blob/test/_posts/2011-09-06-Singleton-%23not.md>'));
   assert(fallback.includes('#L'));
+
+  const cases = [
+    {errors: [['https://wordpress.com/', 403], ['https://www.npmjs.com/', 403]], failed: false, writes: false, verified: 2},
+    {errors: [], exit: '0', failed: false, writes: false},
+    {errors: [['https://wordpress.com/', 404]], failed: true, writes: true},
+    {errors: [['https://www.npmjs.com/', 500]], failed: true, writes: true},
+    {errors: [['https://wordpress.com/missing', 403]], failed: true, writes: true},
+    {errors: [['https://example.com/', 403]], failed: true, writes: true},
+    {errors: [['https://wordpress.com/', 403], ['https://example.com/', 404]], failed: true, writes: true},
+    {errors: [], timeout: 'https://www.npmjs.com/', failed: true, writes: true},
+    {errors: [['https://www.npmjs.com/', 403]], exit: '1', failed: true, writes: false},
+    {errors: [], failed: true, writes: false},
+    {errors: [['https://example.com/', 429]], failed: false, writes: true},
+  ];
+  for (const test of cases) {
+    fs.writeFileSync('report-broken-links.json', JSON.stringify({
+      error_map: {'test.md': test.errors.map(([url, code]) => ({url, status: {code, text: String(code)}}))},
+      timeout_map: test.timeout ? {'test.md': [{url: test.timeout, status: {text: 'Timeout'}}]} : {},
+    }));
+    process.env.CREATE_ISSUE = 'true';
+    process.env.LYCHEE_EXIT_CODE = test.exit ?? '2';
+    let failed = false;
+    let written = false;
+    const core = {summary: {addRaw() {return this;}, async write() {}}, setFailed() {failed = true;}, warning() {}};
+    const github = {paginate: async () => {
+      assert(test.writes, 'Known verified 403s must not access the issue API');
+      return [{number: 58, title: '🤖 Broken Links Report'}];
+    }, rest: {issues: {listForRepo: {}, update: async () => {written = true;}}}};
+    await run(require, core, github, context);
+    assert.equal(failed, test.failed, JSON.stringify(test));
+    assert.equal(written, test.writes, JSON.stringify(test));
+    if (test.verified) assert(fs.readFileSync('report-broken-links.md', 'utf8').includes(`Manually verified links / known 403 blocking (${test.verified})`));
+  }
 })().catch(error => {console.error(error); process.exit(1);});
 """.replace("SCRIPT", json.dumps(script)))
     subprocess.run(["node", str(runner)], cwd=work,
                    env={**env, "RUNNER_TEMP": str(work), "LYCHEE_EXIT_CODE": "2"}, check=True)
-    print("PASS: 3 historical posts; explicit date/categories; custom escaped permalink; repeated/reference/entity links; real Lychee spans; create_issue=false; oldest issue update; rendering-failure fallback")
+    print("PASS: published source anchors; real Lychee spans; no-write mode; issue selection/fallback; exact verified 403s; changed status, unrelated URL, timeout and infrastructure failures")
