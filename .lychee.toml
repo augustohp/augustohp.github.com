@@ -15,14 +15,14 @@ max_cache_age = "2d"
 #############################  Runtime  #############################
 threads = 2
 max_redirects = 10
-max_retries = 3
+max_retries = 2
 max_concurrency = 14
 
 #############################  Requests  ############################
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
-timeout = 60
-retry_wait_time = 60
-accept = ["200", "429"]
+timeout = 20
+retry_wait_time = 2
+accept = ["200"]
 insecure = true
 scheme = ["http", "https", "mailto"]
 require_https = false
@@ -35,7 +35,7 @@ skip_missing = false
 include_verbatim = false
 glob_ignore_case = false
 exclude = ['^(http|https):\/\/(?:www\.)?twitter\.com\/.*', '^(http|https)://(?:www\.)?x\.com/.*', '^http://mtgapi\.com/api/v1/fetch/id', '^https://www\.mysql\.com', '^https://www\.gnu\.org', '^https://web\.archive\.org']
-exclude_path = ["_drafts", "bin", "res", ".github"]
+exclude_path = ["_drafts", "bin", "res", ".github", "report-broken-links.md", "report-broken-links.txt", "report-broken-links.json"]
 include = []
 exclude_all_private = false
 exclude_private = false

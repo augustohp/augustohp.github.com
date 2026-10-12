@@ -7,17 +7,23 @@ on:
   workflow_dispatch:
     inputs:
       create_issue:
-        description: "If 'true' creates an issue with the broken links report."
+        description: "Create or update the link report issue (scheduled runs always report)."
         required: true
         default: true
-        type: string
+        type: boolean
 
-env:
-  OPTION_CREATE_ISSUE: ${{ inputs.create_issue || 'true' }}
+# Serialize report lookup/update so overlapping runs cannot create duplicates.
+concurrency:
+  group: link-health-report
+  cancel-in-progress: false
 
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v7.0.1
 
@@ -29,13 +35,64 @@ jobs:
           lycheeVersion: v0.24.2
           failIfEmpty: false
           debug: false
-          format: markdown
-          output: report-broken-links.md
+          fail: false
+          format: json
+          output: report-broken-links.json
 
-      - name: Report broken links
-        if: ${{ failure() && env.OPTION_CREATE_ISSUE == 'true' }}
-        uses: peter-evans/create-issue-from-file@v6.0.0
+      - name: Summarize and upsert link report
+        if: ${{ !cancelled() && steps.lychee.outputs.exit_code != '' }}
+        uses: actions/github-script@v8
+        env:
+          CREATE_ISSUE: ${{ github.event_name != 'workflow_dispatch' || inputs.create_issue == true }}
+          LYCHEE_EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
         with:
-          title: 🤖 Broken Links Report
-          content-filepath: report-broken-links.md
-          labels: Bug
+          script: |
+            const fs = require('node:fs');
+            const report = JSON.parse(fs.readFileSync('report-broken-links.json', 'utf8'));
+            const broken = [];
+            const blocked = [];
+            for (const [source, links] of Object.entries(report.error_map ?? {})) {
+              for (const link of links) {
+                const code = link.status.code;
+                // These exact profile/status pairs are known crawler blocks, not proof of a dead link.
+                const crawlerBlocked = code === 429 ||
+                  (code === 406 && link.url === 'https://www.last.fm/user/augusto_hp') ||
+                  (code === 999 && link.url === 'https://www.linkedin.com/in/augustohp');
+                (crawlerBlocked ? blocked : broken).push({ source, ...link });
+              }
+            }
+            for (const [source, links] of Object.entries(report.timeout_map ?? {})) {
+              for (const link of links) broken.push({ source, ...link });
+            }
+            const section = (title, links) => `## ${title} (${links.length})\n\n` +
+              (links.length ? links.map(link =>
+                `- ${link.url} — ${link.status.text} (source: ${link.source})`
+              ).join('\n') : 'None.') + '\n\n';
+            const body = '<!-- link-health-report -->\n# Link health report\n\n' +
+              section('Broken or unverified links', broken) +
+              section('Crawler blocking / rate limiting', blocked) +
+              'Blocked links still need manual verification; they are not counted as healthy.\n\n' +
+              `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})\n`;
+            fs.writeFileSync('report-broken-links.md', body);
+            await core.summary.addRaw(body).write();
+
+            // Keep infrastructure/configuration failures red even if no links were reported.
+            if (broken.length || !['0', '2'].includes(process.env.LYCHEE_EXIT_CODE) ||
+                (process.env.LYCHEE_EXIT_CODE !== '0' && !blocked.length)) {
+              core.setFailed('Broken/unverified links or link-checker failure; see the job summary.');
+            }
+            if (blocked.length) core.warning('Crawler-blocked links require manual verification.');
+            if (process.env.CREATE_ISSUE !== 'true' || !(broken.length + blocked.length)) return;
+
+            const title = '🤖 Broken Links Report';
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              ...context.repo, state: 'open', per_page: 100
+            });
+            // Reuse the oldest legacy report; leave duplicate cleanup to the maintainer.
+            const existing = issues.filter(issue => !issue.pull_request && issue.title === title)
+              .sort((a, b) => a.number - b.number)[0];
+            if (existing) {
+              await github.rest.issues.update({ ...context.repo, issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({ ...context.repo, title, body, labels: ['Bug'] });
+            }
