@@ -15,6 +15,7 @@ exclude:
   - docker-compose.yml
   - README.md
   - usr
+  - vendor
   - _drafts
 
 timezone: America/Sao_Paulo
@@ -35,8 +36,15 @@ lsi: false
 permalink: date
 highlighter: rouge
 markdown: kramdown
+sass:
+  style: compressed
+  sourcemap: never
 kramdown:
   input: GFM
+  hard_wrap: false
+  gfm_quirks: [paragraph_end]
+  syntax_highlighter_opts:
+    default_lang: plaintext
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
