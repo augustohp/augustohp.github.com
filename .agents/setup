@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+# Prepare the Ruby/Jekyll toolchain and link checker for Amp orb snapshots.
+# Amp invokes this lifecycle hook without arguments.
+set -euo pipefail
+
+step()
+{
+	printf '\n==> %s\n' "$1"
+	shift
+	time "$@"
+}
+
+main()
+{
+	repo_root="$(cd "$(dirname "$0")/.." && pwd)"
+	cd "$repo_root"
+	ruby_version="$(awk '/^RUBY VERSION$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+$/, ""); print }' Gemfile.lock)"
+	bundler_version="$(awk '/^BUNDLED WITH$/ { getline; gsub(/ /, ""); print }' Gemfile.lock)"
+	: "${ruby_version:?Gemfile.lock must pin Ruby}"
+	: "${bundler_version:?Gemfile.lock must pin Bundler}"
+
+	missing_packages=()
+	for package in build-essential ca-certificates curl libssl-dev libyaml-dev zlib1g-dev libffi-dev libreadline-dev libcurl4
+	do
+		if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -qx 'install ok installed'
+		then
+			missing_packages+=("$package")
+		fi
+	done
+	if [ "${#missing_packages[@]}" -gt 0 ]
+	then
+		apt_command=(apt-get)
+		if [ "$(id -u)" -ne 0 ]
+		then
+			apt_command=(sudo -n apt-get)
+		fi
+		step 'Refresh missing system prerequisites' "${apt_command[@]}" update
+		step 'Install system prerequisites' "${apt_command[@]}" install -y --no-install-recommends "${missing_packages[@]}"
+	fi
+
+	export PATH="$HOME/.local/bin:$PATH"
+	if ! command -v mise >/dev/null 2>&1
+	then
+		step 'Install mise' bash -o pipefail -c 'curl -fsSL https://mise.run | sh'
+	fi
+	# Prefer portable binaries rather than spending startup time compiling Ruby.
+	step "Install Ruby $ruby_version" env MISE_RUBY_COMPILE=false mise install "ruby@$ruby_version"
+	eval "$(mise env --shell bash "ruby@$ruby_version")"
+	if ! gem list --installed --exact bundler --version "$bundler_version" >/dev/null
+	then
+		step "Install Bundler $bundler_version" gem install bundler --version "$bundler_version" --no-document
+	fi
+	# Check restored gems first; never resolve or rewrite the committed lockfile.
+	if ! BUNDLE_FROZEN=true bundle "_${bundler_version}_" check
+	then
+		step 'Install locked gems' env BUNDLE_FROZEN=true bundle "_${bundler_version}_" install --jobs 4 --retry 3
+	fi
+
+	# Match the link checker version used by usr/Dockerfile.
+	if ! command -v lychee >/dev/null 2>&1 || [ "$(lychee --version)" != 'lychee 0.18.0' ]
+	then
+		case "$(uname -m)" in
+			x86_64) lychee_arch=x86_64 ;;
+			aarch64) lychee_arch=aarch64 ;;
+			*) printf 'Unsupported Lychee architecture\n' >&2; exit 1 ;;
+		esac
+		mkdir -p "$HOME/.local/bin"
+		step 'Install Lychee 0.18.0' bash -o pipefail -c 'curl -fsSL "$1" | tar -xz -C "$HOME/.local/bin" lychee' bash \
+			"https://github.com/lycheeverse/lychee/releases/download/lychee-v0.18.0/lychee-$lychee_arch-unknown-linux-gnu.tar.gz"
+	fi
+
+	# Amp and supervised services use new login shells, not this setup process.
+	profile_marker="# augustohp.github.com orb toolchain"
+	if ! grep -Fqx "$profile_marker" "$HOME/.bash_profile" 2>/dev/null
+	then
+		cat >> "$HOME/.bash_profile" <<-EOF
+
+		$profile_marker
+		# Keep the guard shell-local: a nested login shell may reset PATH.
+		if [[ -z "\${augustohp_orb_env:-}" && ( "\$PWD" == "$repo_root" || "\$PWD" == "$repo_root/"* ) ]]; then
+			augustohp_orb_env=1
+			export PATH="\$HOME/.local/bin:\$PATH"
+			orb_ruby_version=\$(awk '/^RUBY VERSION\$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+\$/, ""); print }' "$repo_root/Gemfile.lock")
+			eval "\$(mise env --shell bash "ruby@\$orb_ruby_version")"
+			unset orb_ruby_version
+		fi
+		EOF
+	fi
+
+	ruby --version
+	bundle "_${bundler_version}_" --version
+	lychee --version
+}
+
+main "$@"
