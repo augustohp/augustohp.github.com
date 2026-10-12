@@ -42,7 +42,10 @@ jobs:
 
       - name: Build the frozen bundle in production safe mode
         run: |
-          bundle exec jekyll build --safe --trace
+          # bundler-cache installs under vendor/bundle. Preserve site exclusions
+          # while preventing gem templates from becoming posts or public files.
+          ruby -ryaml -e 'puts({"exclude" => YAML.load_file("_config.yml").fetch("exclude", []) | ["vendor"]}.to_yaml)' > "$RUNNER_TEMP/jekyll-validation.yml"
+          bundle exec jekyll build --safe --trace --config "_config.yml,$RUNNER_TEMP/jekyll-validation.yml"
           git diff --exit-code -- Gemfile Gemfile.lock
 
       - name: Verify rendered site
