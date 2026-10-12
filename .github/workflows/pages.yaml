@@ -1,0 +1,65 @@
+name: Publish GitHub Pages
+
+# Requires Settings > Pages > Source: GitHub Actions (coordinated separately).
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  BUNDLE_FROZEN: 'true'
+  JEKYLL_ENV: production
+  PAGES_REPO_NWO: ${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Read locked toolchain
+        id: toolchain
+        run: |
+          ruby_version=$(awk '/^RUBY VERSION$/ { getline; sub(/^ +ruby /, ""); sub(/p[0-9]+$/, ""); print }' Gemfile.lock)
+          bundler_version=$(awk '/^BUNDLED WITH$/ { getline; gsub(/ /, ""); print }' Gemfile.lock)
+          : "${ruby_version:?Gemfile.lock must pin Ruby}"
+          : "${bundler_version:?Gemfile.lock must pin Bundler}"
+          echo "ruby=$ruby_version" >> "$GITHUB_OUTPUT"
+          echo "bundler=$bundler_version" >> "$GITHUB_OUTPUT"
+      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
+        with:
+          ruby-version: ${{ steps.toolchain.outputs.ruby }}
+          bundler: ${{ steps.toolchain.outputs.bundler }}
+          bundler-cache: true
+      - name: Read Pages configuration
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Build locked site
+        run: bundle exec jekyll build --safe --baseurl "$BASE_PATH"
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy built artifact
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
